@@ -82,7 +82,7 @@
     "prettier": "^2.4.1"
   },
   "scripts": {
-    "build": "gatsby build --prefix-paths",
+    "build": "gatsby build",
     "develop": "gatsby develop",
     "clean": "gatsby clean",
     "serve": "gatsby serve",
