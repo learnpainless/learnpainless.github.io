@@ -1,0 +1,72 @@
+---
+label: post
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- name: categories
+  type: select
+  default: []
+  config:
+    required: true
+    options: []
+    source:
+      type: pages
+      section: categories
+      file: 
+      path: 
+  label: categories
+- type: list
+  name: tags
+  label: tags
+- type: file
+  name: image
+  label: image
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+    max: 160
+    min: 48
+  label: description
+- name: author
+  type: select
+  default: content/authors/pawneshwer.md
+  config:
+    required: true
+    options: []
+    source:
+      type: pages
+      section: authors
+      file: 
+      path: 
+  label: Author
+- name: layout
+  type: select
+  default: post
+  config:
+    required: false
+    options:
+    - post
+    - post-java
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: layout
+- type: boolean
+  name: draft
+  label: draft
+- type: boolean
+  name: comments
+  label: comments
+  default: true

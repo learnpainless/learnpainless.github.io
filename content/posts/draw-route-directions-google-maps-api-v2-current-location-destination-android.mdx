@@ -1,0 +1,33 @@
+---
+title: How to draw route directions google maps API V2 from current location to destination Android
+date: 2013-03-09 04:38:00 +05:30
+categories:
+- android
+- map
+tags:
+- google directions
+- map v2
+- location
+modified_time: 2013-03-09 09:06 +05:30
+author: [pawneshwer]
+description: How to draw route directions google maps API V2 from current location to destination Android. Draw exact path between 2 locations google directions.
+comments: true
+layout: post
+draft: false
+image: img/draw-route-directions-google-maps-api-v2-current-location-destination-android-min.png
+---
+import Gist from 'react-gist'
+
+## How to draw route directions google maps API V2 from current location to destination Android
+
+First we will hit google directions url using our start and end latitute and longitude. After that we will read xml content on that webpage and parse in our app using xml parser. And then we will fetch list of latitude and longitude from that webpage and display on google map on android.
+
+below is code:
+
+<Gist id='1ec69fde5e8c17489fb7cf1bed937ee0' />
+
+After creating above file you can use below methods to get locations and display on google map.
+
+<Gist id='fe84780a7d8862b0045786ff7f9f046e' />
+
+The sourcePosition, destPosition are from the LatLng type, and you give them the wanted points.

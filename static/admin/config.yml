@@ -1,0 +1,141 @@
+backend:
+  name: gitlab
+  repo: pawneshwergupta/final.learnpainless.com
+  auth_type: pkce # Required for implicit grant
+  app_id: 02532d72b9d791e32da59bd45176aa4eb47d6249f4d2b781390ed72e1273e6eb
+  commit_messages:
+    create: 'Create {{collection}} “{{slug}}”'
+    update: 'Update {{collection}} “{{slug}}”'
+    delete: 'Delete {{collection}} “{{slug}}”'
+    uploadMedia: '[skip ci] Upload “{{path}}”'
+    deleteMedia: '[skip ci] Delete “{{path}}”'
+
+#local_backend: true
+site_url: https://learnpainless.com
+logo_url: https://learnpainless.com/logo.png
+# This line should *not* be indented
+publish_mode: editorial_workflow
+media_folder: content/posts/img # Media files will be stored in the repo under images/uploads
+public_folder: ./img # The src attribute for uploaded media will begin with /images/uploads
+collections:
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
+    label: "Posts" # Used in the UI
+    label_singular: 'Post' # Used in the UI, ie: "New Post"
+    folder: "content/posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    # slug: "index" # Filename template, e.g., YYYY-MM-DD-title.md
+    # path: '{{title}}/index'
+    editor:
+      preview: true
+    #summary: '{{title}} -- {{year}}/{{month}}/{{day}}'
+    view_filters:
+      - label: Posts With Index
+        field: title
+        pattern: 'This is post #'
+      - label: Posts Without Index
+        field: title
+        pattern: front matter post
+      - label: Drafts
+        field: draft
+        pattern: true
+    view_groups:
+      - label: Year
+        field: date
+        pattern: \d{4}
+      - label: Drafts
+        field: draft
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+#      - {label: "Slug", name: "slug", widget: "string", default: "{{slug}}"}
+      - { label: 'Draft', name: 'draft', widget: 'boolean', default: false }
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Meta Description", name: "description", widget: "string" }
+#      - name: categories
+#        label: Categories
+#        widget: relation
+#        multiple: true
+#        value_field: categories.*
+#        search_fields: ['categories.*']
+#        collection: posts
+#        create: true
+#        required: true
+      - widget: relation
+        name: categories
+        label: Categories
+        multiple: true
+        required: true
+        hint: >-
+          The category of the post
+        collection: category
+        valueField: slug
+        searchFields: [ "title" ]
+        displayFields: [ "title" ]
+      - name: tags
+        label: Tags
+        widget: categories
+        separator: ","
+        required: true
+      - widget: relation
+        name: author
+        label: Author
+        required: true
+        hint: >-
+          The author of the post
+        collection: author
+        valueField: slug
+        searchFields: ["title"]
+        displayFields: ["title"]  
+  - name: author
+    label: Authors
+    folder: content/authors
+    media_folder: img
+    public_folder: img
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Avatar", name: "image", widget: "image"}
+      - widget: string
+        name: title
+        label: Name
+        required: true
+        hint: >-
+          The name of the author
+      - widget: string
+        name: slug
+        label: Slug
+        required: true
+        hint: >-
+          The post URL (do not include folder or file extension)
+      - widget: markdown
+        name: body
+        label: Content
+        required: true
+        hint: Author bio
+  - name: category
+    label: Categories
+    folder: content/categories
+    media_folder: img
+    public_folder: img
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Icon", name: "image", widget: "image" }
+      - widget: string
+        name: title
+        label: Name
+        required: true
+        hint: >-
+          The name of the category
+      - widget: string
+        name: slug
+        label: Slug
+        required: true
+        hint: >-
+          The post URL (do not include folder or file extension)
+      - widget: markdown
+        name: body
+        label: Description
+        required: false
+        hint: Description

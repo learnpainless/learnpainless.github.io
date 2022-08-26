@@ -1,0 +1,76 @@
+---
+title: Kotlin Working with the Command Line Compiler
+date: 2017-06-30T22:06:00.000Z
+categories:
+  - kotlin
+  - start
+tags:
+  - CLI
+  - IDE
+modified_time: '2020-01-10 02:06 +05:30'
+author:
+  - pawneshwer
+description: >-
+  Setup command line compiler for kotlin to run kotlin codes from CLI without
+  using IDE. How to run kotlin from command line.
+comments: true
+layout: post-kotlin
+image: ./img/kotlin-working-with-the-command-line-compiler-min.png
+---
+
+## Kotlin Working with the Command Line Compiler
+
+In this tutorial we will create hello world application in kotlin using command line compiler from [Github release](https://github.com/JetBrains/kotlin/releases/) page.
+
+## Download compiler
+
+Every release ships with a standalone version of the compiler. we will download the newest version
+
+### Manual Install
+
+Unzip the standalone compiler into a directory and optionally add the bin directory to the system path. The bin directory contains the scripts needed to compile and run Kotlin on Windows, OS X and Linux.
+
+### SDKMAN!
+
+An easier way to install Kotlin on UNIX based systems such as OS X, Linux, Cygwin, FreeBSD and Solaris is by using [SDKMAN!](http://sdkman.io/). Simply run the following in a terminal and follow any instructions:
+
+`$ curl -s https://get.sdkman.io | bash`
+
+Next open a new terminal and install Kotlin with:
+
+`$ sdk install kotlin`
+
+### Homebrew
+
+Alternatively, on OS X you can install the compiler via [Homebrew](http://brew.sh/).
+
+`$ brew update
+$ brew install kotlin`
+
+### [Snap](https://snapcraft.io/) package
+
+If you’re on Ubuntu 16.04 or later, you can install the compiler from the command line:
+
+`$ sudo snap install --classic kotlin`
+
+## Creating and running a first application
+
+1. Create a simple application in Kotlin that displays Hello, World!. Using our favorite editor, we create a new file called hello.kt with the following:
+
+```kotlin
+fun main(args: Array<String>) {
+    println("Hello, World!")
+}
+```
+
+2. Compile the application using the Kotlin compiler
+
+`kotlinc hello.kt -include-runtime -d hello.jar`
+
+The -d option indicates the output path for generated class files which may be either a directory or a .jar file. The -include-runtime option makes the resulting .jar file self-contained and runnable by including the Kotlin runtime library in it. If you want to see all available options run
+
+`$ kotlinc -help`
+
+3. Run the application.
+
+`$ java -jar hello.jar`

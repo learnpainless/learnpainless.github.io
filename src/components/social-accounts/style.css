@@ -1,0 +1,207 @@
+.social a:before{
+  display:inline-block;
+  font-family:'Font Awesome 5 Free';
+  font-style:normal;
+  font-weight:400
+}
+
+.social-color .facebook a{
+  background-color:#3b5999
+}
+.social-color .twitter a{
+  background-color:#00acee
+}
+.social-color .telegram a{
+  background-color:#0088cc
+}
+.social-color .gplus a{
+  background-color:#db4a39
+}
+.social-color .youtube a{
+  background-color:#db4a39
+}
+.social-color .instagram a{
+  background:linear-gradient(15deg,#ffb13d,#dd277b,#4d5ed4)
+}
+.social-color .pinterest a{
+  background-color:#ca2127
+}
+.social-color .dribbble a{
+  background-color:#ea4c89
+}
+.social-color .linkedin a{
+  background-color:#0077b5
+}
+.social-color .tumblr a{
+  background-color:#365069
+}
+.social-color .twitch a{
+  background-color:#6441a5
+}
+.social-color .rss a{
+  background-color:#ffc200
+}
+.social-color .skype a{
+  background-color:#00aff0
+}
+.social-color .stumbleupon a{
+  background-color:#eb4823
+}
+.social-color .vk a{
+  background-color:#4a76a8
+}
+.social-color .stack-overflow a{
+  background-color:#f48024
+}
+.social-color .github a{
+  background-color:#24292e
+}
+.social-color .soundcloud a{
+  background:linear-gradient(#ff7400,#ff3400)
+}
+.social-color .behance a{
+  background-color:#191919
+}
+.social-color .digg a{
+  background-color:#1b1a19
+}
+.social-color .delicious a{
+  background-color:#0076e8
+}
+.social-color .codepen a{
+  background-color:#000
+}
+.social-color .reddit a{
+  background-color:#ff4500
+}
+.social-color .whatsapp a{
+  background-color:#3fbb50
+}
+.social-color .snapchat a{
+  background-color:#ffe700
+}
+.social-color .email a{
+  background-color:#888
+}
+.social-color .external-link a{
+  background-color:#161619
+}
+.social-text .facebook a:after{
+  content:"Facebook"
+}
+.social-text .twitter a:after{
+  content:"Twitter"
+}
+.social-text .telegram a:after{
+  content:"Telegram"
+}
+.social-text .gplus a:after{
+  content:"Google Plus"
+}
+.social-text .rss a:after{
+  content:"Rss"
+}
+.social-text .youtube a:after{
+  content:"YouTube"
+}
+.social-text .skype a:after{
+  content:"Skype"
+}
+.social-text .stumbleupon a:after{
+  content:"StumbleUpon"
+}
+.social-text .tumblr a:after{
+  content:"Tumblr"
+}
+.social-text .vk a:after{
+  content:"VKontakte"
+}
+.social-text .stack-overflow a:after{
+  content:"Stack Overflow"
+}
+.social-text .github a:after{
+  content:"Github"
+}
+.social-text .linkedin a:after{
+  content:"LinkedIn"
+}
+.social-text .dribbble a:after{
+  content:"Dribbble"
+}
+.social-text .soundcloud a:after{
+  content:"SoundCloud"
+}
+.social-text .behance a:after{
+  content:"Behance"
+}
+.social-text .digg a:after{
+  content:"Digg"
+}
+.social-text .instagram a:after{
+  content:"Instagram"
+}
+.social-text .pinterest a:after{
+  content:"Pinterest"
+}
+.social-text .twitch a:after{
+  content:"Twitch"
+}
+.social-text .delicious a:after{
+  content:"Delicious"
+}
+.social-text .codepen a:after{
+  content:"CodePen"
+}
+.social-text .flipboard a:after{
+  content:"Flipboard"
+}
+.social-text .reddit a:after{
+  content:"Reddit"
+}
+.social-text .whatsapp a:after{
+  content:"Whatsapp"
+}
+.social-text .messenger a:after{
+  content:"Messenger"
+}
+.social-text .snapchat a:after{
+  content:"Snapchat"
+}
+.social-text .email a:after{
+  content:"Email"
+}
+.social-text .external-link a:after{
+  content:"WebSite"
+}
+.social-counter li{
+  float:left;
+  width:calc(50% - 5px);
+  margin:10px 0 0
+}
+.social-counter li:nth-child(1),.social-counter li:nth-child(2){
+  margin-top:0
+}
+.social-counter li:nth-child(even){
+  float:right
+}
+.social-counter li a{
+  display:block;
+  height:34px;
+  font-size:13px;
+  color:#fff;
+  line-height:34px;
+  transition:opacity .17s
+}
+.social-counter li a:hover{
+  opacity:.8
+}
+.social-counter svg{
+  float:left;
+  width:34px;
+  height:34px;
+  padding: 8px;
+  background-color:rgba(255,255,255,0.1);
+  font-size:16px;
+  text-align:center;
+  margin:0 10px 0 0
+}

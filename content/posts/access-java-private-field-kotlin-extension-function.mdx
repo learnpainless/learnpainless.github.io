@@ -1,0 +1,78 @@
+---
+title: How to access Java private field in Kotlin extension function
+date: 2017-03-09 02:38:00 +05:30
+categories:
+- android
+- kotlin
+tags:
+- extension function
+- java
+- private field
+
+modified_time: 2013-03-09 09:06 +05:30
+author: [pawneshwer]
+description: How to access Java private field in Kotlin extension function. fix we can't access private field from kotlin extension function.
+comments: true
+layout: post
+draft: false
+image: img/access-java-private-field-kotlin-extension-function-min.png
+---
+
+## How to access Java private field in Kotlin extension function
+
+If I'd like to access Java's private field when using Kotlin extension function.
+
+Suppose I have a Java class `ABC`. `ABC` has only one private field `mPrivateField`. I'd like to write an extension function in Kotlin which uses that field for whatever reason.
+
+```java
+public class ABC {
+    private int mPrivateField;
+
+}
+```
+
+the Kotlin function would be:
+
+```kotlin
+private fun ABC.testExtFunc() {
+    val canIAccess = this.mPrivateField;
+}
+```
+the error I'm getting is:
+
+`Cannot access 'mPrivateField': It is private in 'ABC'`
+
+## So here is fix to resolve this problem
+
+First of all we will pick a Field from Java class then we will enable that field to make it accessible from Kotlin code.
+
+### Example:
+
+```kotlin
+val field = ABC::class.java.getDeclaredField("mPrivateField")
+
+field.isAccessible = true
+```
+
+Now we can read field value as Int using `Field#getInt` function from instance of our `ABC` class (declaring class).
+
+### Example:
+
+```kotlin
+val it: ABC = TODO()
+
+val value = field.getInt(it)
+```
+
+Now our extension method in Kotlin will look like this:
+
+```kotlin
+private inline fun ABC.testExtFunc():Int {
+    return javaClass.getDeclaredField("mPrivateField").let {
+        it.isAccessible = true
+        val value = it.getInt(this)
+        //todo
+        return@let value;
+    }
+}
+```

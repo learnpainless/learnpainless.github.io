@@ -1,0 +1,17 @@
+fabPost.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        x = v.getX() - event.getRawX();
+                        y = v.getY() - event.getRawY();
+                        break;
+                    case MotionEvent.ACTION_MOVE:
+                        v.animate().x(event.getRawX() + x).y(event.getRawY() + y).setDuration(0).start();
+                        break;
+                    default:
+                        return false;
+                }
+                return true;
+            }
+        });
