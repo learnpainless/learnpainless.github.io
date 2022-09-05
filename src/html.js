@@ -29,6 +29,10 @@ export default function HTML(props) {
         {/*<script src='https://cdn.jsdelivr.net/gh/RockBlogger/Anti-AdBlocker@main/2.0/code.min.js'/>*/}
         <script src='/aab/app.js'/>
 
+        <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7943122633795545"
+                crossOrigin="anonymous"></script>
+
         {/* <script async defer crossOrigin={"anonymous"} src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0&appId=245392315801658&autoLogAppEvents=1" nonce="9RXWqeSW"></script>
         <script async defer src="https://platform.twitter.com/widgets.js" charSet={"utf-8"}></script>
         <script async defer src="https://apis.google.com/js/platform.js"></script> */}

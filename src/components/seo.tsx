@@ -147,9 +147,9 @@ const SEO: React.FunctionComponent<SEOProps> = ({
         )
         .concat(meta)}
     >
-      {
+      {/*{
         isHome ? <script></script> : <script data-ad-client="ca-pub-7943122633795545" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      }
+      }*/}
       {
         isHome ?
           <script type="application/ld+json">
