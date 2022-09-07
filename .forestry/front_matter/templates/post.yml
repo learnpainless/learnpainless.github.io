@@ -15,8 +15,10 @@ fields:
     min: 1
     max: 
     source:
-      type: pages
-      section: categories
+      type: documents
+      section: posts
+      file: 
+      path: categories
   label: Categories
 - type: list
   name: tags
