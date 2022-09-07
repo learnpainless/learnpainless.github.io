@@ -11,7 +11,7 @@ fields:
 - name: categories
   type: list
   config:
-    use_select: true
+    use_select: false
     min: 1
     max: 
     source:
