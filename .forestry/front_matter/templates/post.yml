@@ -9,17 +9,15 @@ fields:
   name: date
   label: date
 - name: categories
-  type: select
-  default: []
+  type: list
   config:
-    required: true
-    options: []
+    use_select: true
+    min: 1
+    max: 
     source:
-      type: pages
+      type: documents
       section: categories
-      file: 
-      path: 
-  label: categories
+  label: Categories
 - type: list
   name: tags
   label: tags
