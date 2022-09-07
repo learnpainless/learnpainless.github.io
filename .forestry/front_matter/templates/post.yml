@@ -38,16 +38,11 @@ fields:
     min: 48
   label: description
 - name: author
-  type: select
-  default: content/authors/pawneshwer.md
+  type: list
   config:
-    required: true
-    options: []
-    source:
-      type: pages
-      section: authors
-      file: 
-      path: 
+    use_select: false
+    min: 
+    max: 
   label: Author
 - name: layout
   type: select
