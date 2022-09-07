@@ -1,6 +1,8 @@
 ---
-categories: content/categories/flutter.md
-author: content/authors/pawneshwer.md
+categories:
+- flutter
+author:
+- pawneshwer
 layout: post
 comments: true
 title: Flutter WorkManager not working in Release mode (Working in Debug mode)
