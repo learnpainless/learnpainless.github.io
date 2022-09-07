@@ -15,7 +15,7 @@ fields:
     min: 1
     max: 
     source:
-      type: documents
+      type: pages
       section: categories
   label: Categories
 - type: list
