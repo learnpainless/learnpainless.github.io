@@ -70,3 +70,5 @@ fields:
   name: comments
   label: comments
   default: true
+pages:
+- content/posts/flutter-workmanager-not-working-in-release-mode-working-in-debug-mode.md
