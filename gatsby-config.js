@@ -35,6 +35,7 @@ module.exports = {
         name: `assets`,
       },
     },
+
     {
       //resolve: `gatsby-transformer-remark`,
       resolve: `gatsby-plugin-mdx`,
@@ -88,6 +89,12 @@ module.exports = {
     },
     {
       resolve: `gatsby-transformer-sharp`,
+    },
+    {
+      resolve: `gatsby-plugin-google-adsense`,
+      options: {
+        publisherId: `ca-pub-7943122633795545`
+      },
     },
     {
       resolve: `gatsby-plugin-sharp`,

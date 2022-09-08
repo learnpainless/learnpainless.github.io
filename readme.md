@@ -3,3 +3,5 @@
 
 - run `npx netlify-cms-proxy-server` in root directory
 - finally run `gatsby develop`
+
+- https://github.com/gatsbyjs/gatsby/issues/34883
