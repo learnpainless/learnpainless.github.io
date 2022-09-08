@@ -91,12 +91,6 @@ module.exports = {
       resolve: `gatsby-transformer-sharp`,
     },
     {
-      resolve: `gatsby-plugin-google-adsense`,
-      options: {
-        publisherId: `ca-pub-7943122633795545`
-      },
-    },
-    {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {

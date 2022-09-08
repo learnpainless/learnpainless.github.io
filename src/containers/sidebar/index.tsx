@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStaticQuery, graphql, Link } from 'gatsby';
+import {useStaticQuery, graphql, Link} from 'gatsby';
 import _ from 'lodash';
 import FeaturePost from '../../components/feature-post/feature-post';
 import {
@@ -9,12 +9,13 @@ import {
   TagItem,
 } from './style';
 import SocialAccounts from '../../components/social-accounts/social-accounts'
-import { Vehicle } from '../../components/ads/vehicle';
+import {Vehicle} from '../../components/ads/vehicle';
+import AdBlock from "../../components/ads/adsense_ad";
 
 type SidebarProps = {};
 
 const Sidebar: React.FunctionComponent<SidebarProps> = () => {
-  
+
   const Data = useStaticQuery(graphql`
     query {
       allMdx(
@@ -63,11 +64,11 @@ const Sidebar: React.FunctionComponent<SidebarProps> = () => {
     <SidebarWrapper>
       <SidebarWidget>
         <WidgetTitle>Try our Flutter App</WidgetTitle>
-        <Vehicle />
+        <Vehicle/>
       </SidebarWidget>
       <SidebarWidget>
         <WidgetTitle>Featured Posts</WidgetTitle>
-        {Posts.map(({ node }: any) => {
+        {Posts.map(({node}: any) => {
           const title = node.frontmatter.title || node.fields.slug;
           // Random Placeholder Color
           const placeholderColors = [
@@ -84,8 +85,8 @@ const Sidebar: React.FunctionComponent<SidebarProps> = () => {
           ];
           const setColor =
             placeholderColors[
-            Math.floor(Math.random() * placeholderColors.length)
-            ];
+              Math.floor(Math.random() * placeholderColors.length)
+              ];
 
           return (
             <FeaturePost
@@ -105,6 +106,9 @@ const Sidebar: React.FunctionComponent<SidebarProps> = () => {
       </SidebarWidget>
 
       <SidebarWidget>
+        <AdBlock client={'ca-pub-7943122633795545'} slot={'1910589993'} />
+      </SidebarWidget>
+      <SidebarWidget>
         <WidgetTitle>Tags</WidgetTitle>
         {Tags.map((tag: any) => (
           <TagItem key={tag.fieldValue}>
@@ -118,17 +122,24 @@ const Sidebar: React.FunctionComponent<SidebarProps> = () => {
 
       <SidebarWidget>
         <WidgetTitle>FOLLOW US</WidgetTitle>
-        <div className={"fb-page"} data-href="https://www.facebook.com/LearnPainLess" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/LearnPainLess" className={"fb-xfbml-parse-ignore"}><a href="https://www.facebook.com/LearnPainLess">Learn Pain Less</a></blockquote></div>
+        <div className={"fb-page"} data-href="https://www.facebook.com/LearnPainLess" data-tabs="" data-width=""
+             data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+             data-show-facepile="true">
+          <blockquote cite="https://www.facebook.com/LearnPainLess" className={"fb-xfbml-parse-ignore"}><a
+            href="https://www.facebook.com/LearnPainLess">Learn Pain Less</a></blockquote>
+        </div>
       </SidebarWidget>
       <SidebarWidget>
-        <a href="https://twitter.com/LearnPainLess?ref_src=twsrc%5Etfw" className={"twitter-follow-button"} data-show-count="false">Follow @LearnPainLess</a>
+        <a href="https://twitter.com/LearnPainLess?ref_src=twsrc%5Etfw" className={"twitter-follow-button"}
+           data-show-count="false">Follow @LearnPainLess</a>
       </SidebarWidget>
       <SidebarWidget>
-        <div className={"g-ytsubscribe"} data-channelid="UCglYchjdo11zTelZVY4QUjA" data-layout="full" data-count="default"></div>
+        <div className={"g-ytsubscribe"} data-channelid="UCglYchjdo11zTelZVY4QUjA" data-layout="full"
+             data-count="default"></div>
       </SidebarWidget>
 
       <WidgetTitle>JOIN SOCIAL ACCOUNTS</WidgetTitle>
-      <SocialAccounts />
+      <SocialAccounts/>
     </SidebarWrapper>
   );
 };

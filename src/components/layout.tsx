@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import Sticky from 'react-stickynode';
 import { ThemeProvider } from 'styled-components';
 import ScrollToTop from 'react-scroll-up';
@@ -16,6 +16,26 @@ type LayoutProps = {
 };
 
 const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
+  const scrolled = useRef(null)
+  useEffect(() => {
+    const headID = document.getElementsByTagName('head')[0]
+
+    document.addEventListener('scroll', function (e) {
+      if (!scrolled.current) {
+        scrolled.current = true
+
+        // Google Ads
+        const gaScript = document.createElement('script')
+        gaScript.async = true
+        gaScript.crossorigin = 'anonymous'
+        gaScript['data-ad-client'] = 'ca-pub-7943122633795545'
+        gaScript.src =
+          'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+        gaScript.type = 'text/javascript'
+        headID.appendChild(gaScript)
+      }
+    })
+  }, [])
   return (
     <ThemeProvider theme={theme}>
       <>
