@@ -50,7 +50,7 @@ const BlogList = (props: any) => {
                   image={
                     node.frontmatter.image == null
                       ? null
-                      : node.frontmatter.image.childImageSharp.fluid
+                      : node.frontmatter.image.childImageSharp.gatsbyImageData
                   }
                   url={'/' + node.fields.slug}
                   description={node.frontmatter.description || node.excerpt}
