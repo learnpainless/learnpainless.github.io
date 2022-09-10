@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: Python Tutorial for Beginners | Python Installation and VS Code setup
-date: 2022-09-10T00:00:00+05:30
+date: 2022-09-10T02:00:00+05:30
 categories:
 - Python
 tags:
