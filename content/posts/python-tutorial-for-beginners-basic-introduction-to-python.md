@@ -28,7 +28,9 @@ In which case "**helloworld.py**" is the name of the Python file.
 
 Let's write our very first Python file, which is called helloworld.py This is possible to do using every text editor.
 
-    print("Hello, World!")
+```python
+print("Hello, World!")
+```
 
 It's as easy and easy. You can save your files. Start the command prompt, go to the directory in which you saved your file and then run:
 
@@ -78,12 +80,18 @@ we can use + (Add), - (Subtract), * (Multiply), / (Divide) operators
 
 As you can see in above screenshot, we can easily perform Arithmetic operations in Python. But if you notice that if we divide **4 / 2** then its returning 2.0 (which is a float value) instead of 2. Because the reason behind this is that division operations can return decimal values. for example 
 
-    3 / 2 = 1.5
+```python
+3 / 2 = 1.5
+```
 
 but if you want output of divide in integer format (without decimal) then we can do 
 
-    3 // 2 = 1
+```python
+3 // 2 = 1
+```
 
 There are few special operators as well, for example 
 
-    2 ** 3 = 8 //(3 is power of 2)
+```python
+2 ** 3 = 8 //(3 is power of 2)
+```
