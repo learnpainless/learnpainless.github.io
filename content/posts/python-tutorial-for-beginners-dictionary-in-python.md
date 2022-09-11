@@ -6,12 +6,10 @@ date: 2022-09-11T01:08:00+05:30
 categories:
 - Python
 tags:
-- set
-- tuple
-image: "./img/python-tuple-set.png"
-description: This tutorial will teach you about tuples and sets in Python. Read on
-  to learn what each of the data types is, how they're used, and when they should
-  be used.
+- dictionary
+image: "./img/python-dictionary.png"
+description: Learn what a dictionary is in Python, different dictionaries types, how
+  you can create this type of data structure on your own and find out the access methods
 author: []
 draft: false
 
