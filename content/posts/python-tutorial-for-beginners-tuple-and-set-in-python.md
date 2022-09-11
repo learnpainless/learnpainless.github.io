@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: Python Tutorial for Beginners | Tuple and Set in Python
+title: Python Tutorial for Beginners | Tuple in Python
 date: 2022-09-11T01:08:00+05:30
 categories:
 - Python
