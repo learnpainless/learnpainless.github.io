@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: Python Tutorial for Beginners | Dictionary in Python
-date: 2022-09-11T01:08:00+05:30
+date: 2022-09-11T01:09:00+05:30
 categories:
 - Python
 tags:
