@@ -2,14 +2,16 @@
 layout: post
 comments: true
 title: Python Tutorial for Beginners | Tuple and Set in Python
-date: 2022-09-11T01:07:00+05:30
+date: 2022-09-11T01:08:00+05:30
 categories:
 - Python
 tags:
-- lists
-image: "./img/python-list.png"
-description: Learn how to create lists in Python with this complete tutorial. You
-  will learn about types of lists and how to use them by creating a list of your own.
+- set
+- tuple
+image: "./img/python-tuple-set.png"
+description: This tutorial will teach you about tuples and sets in Python. Read on
+  to learn what each of the data types is, how they're used, and when they should
+  be used.
 author: []
 draft: false
 
