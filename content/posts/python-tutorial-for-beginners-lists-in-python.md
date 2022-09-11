@@ -25,7 +25,7 @@ Lists are one among the 4 data types that Python has built in to store data coll
 Square brackets are used to create lists:
 
 ```python
-thislist = ["apple", "banana", "cherry"]
+thislist = ["Python", "Java", "PHP"]
 print(thislist)
 ```
 
@@ -50,7 +50,7 @@ A list can be modified after it is created. This means that items can be added, 
 Lists can contain items of the same value because they are indexed
 
 ```python
-thislist = ["apple", "banana", "cherry", "apple", "cherry"]
+thislist = ["Python", "Java", "PHP", "Java", "Python"]
 print(thislist)
 ```
 
@@ -59,7 +59,7 @@ print(thislist)
 Use the `len()` function to determine how many items are in a list.
 
 ```python
-thislist = ["apple", "banana", "cherry"]
+thislist = ["Python", "Java", "PHP"]
 print(len(thislist))
 ```
 
@@ -68,7 +68,7 @@ print(len(thislist))
 Any data type can be used to create list items:
 
 ```python
-list1 = ["apple", "banana", "cherry"]
+list1 = ["Python", "Java", "PHP"]
 list2 = [1, 5, 7, 9, 3]
 list3 = [True, False, False]
 ```
@@ -80,6 +80,6 @@ Python sees lists as objects that have the data type "list":
 > <class 'list'>
 
 ```python
-mylist = ["apple", "banana", "cherry"]
+mylist = ["Python", "Java", "PHP"]
 print(type(mylist))
 ```
