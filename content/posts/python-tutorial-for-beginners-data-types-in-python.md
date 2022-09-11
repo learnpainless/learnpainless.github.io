@@ -2,14 +2,14 @@
 layout: post
 comments: true
 title: Python Tutorial for Beginners | Data Types in Python
-date: 2022-09-11T01:08:00+05:30
+date: 2022-09-11T01:10:00+05:30
 categories:
 - Python
 tags:
-- dictionary
-image: "./img/python-dictionary.png"
-description: Learn what a dictionary is in Python, different dictionaries types, how
-  you can create this type of data structure on your own and find out the access methods
+- data types
+image: "./img/python-data-types.png"
+description: This article provides a python tutorial for absolute beginners. We will
+  cover data types – lists, tuples, and dictionaries.
 author: []
 draft: false
 
