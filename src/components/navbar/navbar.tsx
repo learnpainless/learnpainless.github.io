@@ -26,6 +26,10 @@ const MenuItems = [
     url: '/',
   },
   {
+    label: 'Python',
+    url: '/categories/python/',
+  },
+  {
     label: 'Android',
     url: '/categories/android/',
   },
