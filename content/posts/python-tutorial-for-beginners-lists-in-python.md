@@ -77,7 +77,7 @@ list3 = [True, False, False]
 
 Python sees lists as objects that have the data type "list":
 
-> <class 'list'>
+> `<class 'list'>`
 
 ```python
 mylist = ["Python", "Java", "PHP"]
