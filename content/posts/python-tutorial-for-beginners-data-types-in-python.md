@@ -7,7 +7,7 @@ categories:
 - Python
 tags:
 - data types
-image: ''
+image: "./img/python-data-types.png"
 description: This article provides a python tutorial for absolute beginners. We will
   cover data types – lists, tuples, and dictionaries.
 author: []
