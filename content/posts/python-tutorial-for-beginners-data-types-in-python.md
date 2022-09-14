@@ -18,6 +18,48 @@ In programming, data type is an important concept.
 
 Variables can store data of different types, and different types can do different things.
 
+In python, we have 14 data types and they are classified into 6 types.
+
+**I) Fundamental Categery Data Types:**
+
+1\. int
+
+2\. float
+
+3\. bool
+
+4\. complex
+
+**II) Sequential Categery Data Types:**
+
+5\. str
+
+6\. bytes
+
+7\. bytearray
+
+8\. range
+
+**III) List Categery Data Types:**
+
+9\. list
+
+10\. tuple
+
+**IV) Set Categery Data Types:**
+
+11\. set
+
+12\. frozenset
+
+**V) Dict Categery Data Types:**
+
+13\. dict
+
+**VI) None Type Categery Data Types:**
+
+14\. nonetype
+
 Python has the following data types built-in by default, in these categories:
 
 ### Text Type:
