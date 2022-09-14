@@ -38,7 +38,7 @@ note: 'T' and 'F' in True and False in capital are valid bool values, otherwise 
 
 #### 4. complex
 
-Complex number is represented by complex class. It is specified as (real part) + (imaginary part)j. 
+Complex number is represented by complex class. It is specified as (real part) + (imaginary part)j.
 
 For example – 4+7j
 
@@ -53,6 +53,10 @@ String datatype is used to store text values, for example name of person is a te
 name = 'Pawneshwer Gupta'
 
 #### 6. bytes
+
+In Python, a byte string is just that: a sequence of bytes. It isn't human-readable. Under the hood, everything must be converted to a byte string before it can be stored in a computer.
+
+Encoding and decoding are inverse operations. Everything must be encoded before it can be written to disk, and it must be decoded before it can be read by a human.
 
 #### 7. bytearray
 
