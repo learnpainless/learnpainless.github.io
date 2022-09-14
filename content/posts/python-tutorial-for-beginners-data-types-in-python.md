@@ -20,92 +20,60 @@ Variables can store data of different types, and different types can do differen
 
 In python, we have 14 data types and they are classified into 6 types.
 
-**I) Fundamental Categery Data Types:**
+### I) Fundamental Categery Data Types:
 
-1\. int
-
-2\. float
-
-3\. bool
-
-4\. complex
-
-**II) Sequential Categery Data Types:**
-
-5\. str
-
-6\. bytes
-
-7\. bytearray
-
-8\. range
-
-**III) List Categery Data Types:**
-
-9\. list
-
-10\. tuple
-
-**IV) Set Categery Data Types:**
-
-11\. set
-
-12\. frozenset
-
-**V) Dict Categery Data Types:**
-
-13\. dict
-
-**VI) None Type Categery Data Types:**
-
-14\. nonetype
-
-Python has the following data types built-in by default, in these categories:
-
-### Text Type:
-
-str (String)
-
-String datatype is used to store text values, for example name of person is a text, so datatype of this will be str, String value is represented using single quotes (‘’) or double quotes (“”). 
-
-example
-
-name = ‘Pawneshwer Gupta’
-
-### Numeric Types:
-
-int, float, complex
-
-int
+#### 1. int
 
 Interger datatype is used to store positive or negative numeric values without decimal. This means 10 or -10 is valid int values, but 10.0 is not valid int value.
 
-float
+#### 2. float
 
 float datatype is used to store positive or negative numeric values with decimal. Which means 10.0 or -10.0 is valid float values but 10 is not valid.
 
-complex
+#### 3. bool
 
-### Sequence Types:
+bool datatype have only 2 values True or False. True is equals to positive and False is equals to negative value.
 
-list, tuple, range
+note: 'T' and 'F' in True and False in capital are valid bool values, otherwise python will throw error.
 
-### Mapping Type:
+#### 4. complex
 
-dict (Dictionary)
+Complex number is represented by complex class. It is specified as (real part) + (imaginary part)j. 
 
-### Set Types:
+For example – 4+7j
 
-set, frozenset
+### II) Sequential Categery Data Types:
 
-### Boolean Type:
+#### 5. str
 
-bool
+String datatype is used to store text values, for example name of person is a text, so datatype of this will be str, String value is represented using single quotes ('') or double quotes ("").
 
-### Binary Types:
+**example**
 
-bytes, bytearray, memoryview
+name = 'Pawneshwer Gupta'
 
-### None Type:
+#### 6. bytes
 
-NoneType
+#### 7. bytearray
+
+#### 8. range
+
+### III) List Categery Data Types:
+
+#### 9. list
+
+#### 10. tuple
+
+### IV) Set Categery Data Types:
+
+#### 11. set
+
+#### 12. frozenset
+
+### V) Dict Categery Data Types:
+
+#### 13. dict
+
+### VI) None Type Categery Data Types:
+
+#### 14. nonetype
