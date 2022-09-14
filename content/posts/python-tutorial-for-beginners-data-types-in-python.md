@@ -24,9 +24,25 @@ Python has the following data types built-in by default, in these categories:
 
 str (String)
 
+String datatype is used to store text values, for example name of person is a text, so datatype of this will be str, String value is represented using single quotes (‘’) or double quotes (“”). 
+
+example
+
+name = ‘Pawneshwer Gupta’
+
 ### Numeric Types:
 
 int, float, complex
+
+int
+
+Interger datatype is used to store positive or negative numeric values without decimal. This means 10 or -10 is valid int values, but 10.0 is not valid int value.
+
+float
+
+float datatype is used to store positive or negative numeric values with decimal. Which means 10.0 or -10.0 is valid float values but 10 is not valid.
+
+complex
 
 ### Sequence Types:
 
@@ -40,14 +56,14 @@ dict (Dictionary)
 
 set, frozenset
 
-### Boolean Type:	
+### Boolean Type:
 
 bool
 
-### Binary Types:	
+### Binary Types:
 
 bytes, bytearray, memoryview
 
-### None Type:	
+### None Type:
 
 NoneType
