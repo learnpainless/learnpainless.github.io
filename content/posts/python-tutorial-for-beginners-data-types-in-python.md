@@ -66,6 +66,22 @@ Both `bytes` and `bytearay` provide functions to encode and decode strings.
 
 #### 8. range
 
+Range is used to create sequence of numbers, we can use range() function to create range.
+
+for example 
+
+x = range(10)
+
+this will create sequence (kind of list) from 0 to 9, which means variable x will contain 10 items from 0 to 9,
+
+we can also define start and end as well
+
+for example
+
+y = range(2,8)
+
+this will create sequence starts with 3 and ends with 7.
+
 ### III) List Categery Data Types:
 
 #### 9. list
