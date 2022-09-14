@@ -60,6 +60,10 @@ Encoding and decoding are inverse operations. Everything must be encoded before 
 
 #### 7. bytearray
 
+`bytes` and `bytearray` classes both hold arrays of bytes, where each byte can take on a value between 0 and 255. The primary difference is that a `bytes` object is _immutable_, meaning that once created, you cannot modify its elements. By contrast, a `bytearray`object allows you to modify its elements.
+
+Both `bytes` and `bytearay` provide functions to encode and decode strings.
+
 #### 8. range
 
 ### III) List Categery Data Types:
