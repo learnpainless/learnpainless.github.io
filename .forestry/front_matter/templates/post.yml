@@ -4,10 +4,10 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
 - type: datetime
   name: date
-  label: date
+  label: Publish Date
   default: now
 - name: categories
   type: list
@@ -23,10 +23,10 @@ fields:
   label: Categories
 - type: list
   name: tags
-  label: tags
+  label: Tags
 - type: file
   name: image
-  label: image
+  label: Image
 - name: description
   type: textarea
   default: ''
@@ -37,7 +37,7 @@ fields:
       format: markdown
     max: 160
     min: 48
-  label: description
+  label: Description
 - name: author
   type: list
   config:
@@ -62,7 +62,7 @@ fields:
   hidden: true
 - type: boolean
   name: draft
-  label: draft
+  label: Draft
 - type: boolean
   name: comments
   label: comments
