@@ -11,6 +11,7 @@ const Posts: React.FunctionComponent<PostsProps> = () => {
     query {
       allMdx(
         sort: { fields: [frontmatter___date], order: DESC }
+        filter: {frontmatter: {draft: {ne: true}}}
         limit: 6
       ) {
         totalCount
@@ -25,6 +26,7 @@ const Posts: React.FunctionComponent<PostsProps> = () => {
               title
               description
               tags
+              draft
               image {
                 childImageSharp {
                   gatsbyImageData(

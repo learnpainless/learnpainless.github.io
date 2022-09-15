@@ -170,7 +170,7 @@ export const pageQuery = graphql`
       limit: 3
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {
-        frontmatter: { categories: { in: $category } }
+        frontmatter: { categories: { in: $category }, draft: {ne: true} }
         fields: { slug: { ne: $slug } }
       }
     ) {
@@ -184,6 +184,7 @@ export const pageQuery = graphql`
             title
             tags
             categories
+            draft
             image {
               publicURL
               childImageSharp {

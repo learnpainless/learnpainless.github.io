@@ -87,6 +87,7 @@ export const pageQuery = graphql`
     }
     allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
+      filter: {frontmatter: {draft: {ne: true}}}
       limit: $limit
       skip: $skip
     ) {
@@ -101,6 +102,7 @@ export const pageQuery = graphql`
             title
             description
             tags
+            draft
             image {
               childImageSharp {
                 gatsbyImageData(
