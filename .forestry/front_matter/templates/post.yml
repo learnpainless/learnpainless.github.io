@@ -46,6 +46,8 @@ fields:
     max: 
     source:
       type: simple
+    options:
+    - Pawneshwer
   label: Author
 - name: layout
   type: select
