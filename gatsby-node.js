@@ -29,6 +29,7 @@ exports.createPages = ({ graphql, actions }) => {
     `
       {
         allMdx(
+          filter: {frontmatter: {draft: {ne: true}}}
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
@@ -42,6 +43,7 @@ exports.createPages = ({ graphql, actions }) => {
                 tags
                 date
                 categories
+                draft
               }
             }
           }

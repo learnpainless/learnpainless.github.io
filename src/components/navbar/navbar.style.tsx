@@ -32,7 +32,7 @@ export const Logo = styled.div`
     margin: 0 25px;
   }
   @media (max-width: 575px) {
-    max-width: 90px;
+    max-width: 60%;
   }
   img {
     display: block;
@@ -244,7 +244,6 @@ export const DrawerHead = styled.div`
 `;
 
 export const DrawerLogo = styled.div`
-  max-width: 110px;
   padding-left: 30px;
   img {
     max-width: 100%;
@@ -300,13 +299,12 @@ export const SiteNavLogoStyles = css`
   img {
     display: block;
     width: auto;
-    height: 21px;
+    height: 48px;
   }
 `;
 
 export const LogoWrapper = css`
-  height: 50px;
-  width: 50px;
+  width: 90%;
 `;
 
 export default HeaderWrapper;

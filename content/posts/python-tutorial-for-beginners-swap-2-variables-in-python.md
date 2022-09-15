@@ -11,6 +11,6 @@ image: "./img/python-swap-variables.png"
 description: This article provides a python tutorial for absolute beginners. We will
   cover data types – lists, tuples, and dictionaries.
 author: []
-draft: false
+draft: true
 
 ---
