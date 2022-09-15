@@ -8,6 +8,7 @@ fields:
 - type: datetime
   name: date
   label: date
+  default: now
 - name: categories
   type: list
   config:
@@ -58,6 +59,7 @@ fields:
       file: 
       path: 
   label: layout
+  hidden: true
 - type: boolean
   name: draft
   label: draft
@@ -65,6 +67,7 @@ fields:
   name: comments
   label: comments
   default: true
+  hidden: true
 pages:
 - content/posts/flutter-workmanager-not-working-in-release-mode-working-in-debug-mode.md
 - content/posts/python-tutorial-for-beginners-basic-introduction-to-python.md
