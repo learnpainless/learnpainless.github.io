@@ -24,15 +24,15 @@ In python, we have 14 data types and they are classified into 6 types.
 
 #### 1. int
 
-Interger datatype is used to store positive or negative numeric values without decimal. This means 10 or -10 is valid int values, but 10.0 is not valid int value.
+Interger datatype is used to store positive or negative numeric values without decimal. This means `10` or `-10` is valid int values, but `10.0` is not valid int value.
 
 #### 2. float
 
-float datatype is used to store positive or negative numeric values with decimal. Which means 10.0 or -10.0 is valid float values but 10 is not valid.
+float datatype is used to store positive or negative numeric values with decimal. Which means `10.0` or `-10.0` is valid float values but `10` is not valid.
 
 #### 3. bool
 
-bool datatype have only 2 values True or False. True is equals to positive and False is equals to negative value.
+bool datatype have only 2 values `True` or `False`. `True` is equals to positive and `False` is equals to negative value.
 
 note: 'T' and 'F' in True and False in capital are valid bool values, otherwise python will throw error.
 
@@ -40,7 +40,10 @@ note: 'T' and 'F' in True and False in capital are valid bool values, otherwise 
 
 Complex number is represented by complex class. It is specified as (real part) + (imaginary part)j.
 
-For example – 4+7j
+For example – 
+```python
+4+7j
+```
 
 ### II) Sequential Categery Data Types:
 
@@ -50,7 +53,9 @@ String datatype is used to store text values, for example name of person is a te
 
 **example**
 
+```python
 name = 'Pawneshwer Gupta'
+```
 
 #### 6. bytes
 
@@ -70,7 +75,9 @@ Range is used to create sequence of numbers, we can use range() function to crea
 
 for example
 
+```python
 x = range(10)
+```
 
 this will create sequence (kind of list) from 0 to 9, which means variable x will contain 10 items from 0 to 9,
 
@@ -78,7 +85,9 @@ we can also define start and end as well
 
 for example
 
+```python
 y = range(2,8)
+```
 
 this will create sequence starts with 3 and ends with 7.
 
@@ -88,8 +97,10 @@ this will create sequence starts with 3 and ends with 7.
 
 **Python Lists** are just like dynamically sized arrays, declared in other languages (vector in C++ and ArrayList in Java). In simple language, a list is a collection of things, enclosed in \[ \] and separated by commas.
 
-    myList = ["Java", "Python", "PHP"]
-    print(myList)
+```python
+myList = ["Java", "Python", "PHP"]
+print(myList)
+```
 
 #### 10. tuple
 
@@ -97,31 +108,35 @@ this will create sequence starts with 3 and ends with 7.
 
 Values of a tuple are syntactically separated by ‘commas’. Although it is not necessary, it is more common to define a tuple by closing the sequence of values in parentheses. This helps in understanding the Python tuples more easily.
 
-    myTuple = ("Java", "Python", "PHP")
-    print(myTuple)
+```python
+myTuple = ("Java", "Python", "PHP")
+print(myTuple)
+```
 
 ### IV) Set Categery Data Types:
 
 #### 11. set
 
 In Python, a **Set** is an unordered collection of data types that is iterable, mutable and has no duplicate elements. The order of elements in a set is undefined though it may consist of various elements. The major advantage of using a set, as opposed to a list, is that it has a highly optimized method for checking whether a specific element is contained in the set.
-
-    mySet = {"Java", "Python", "PHP"}
-    print(mySet)
+```python
+mySet = {"Java", "Python", "PHP"}
+print(mySet)
+```
 
 #### 12. frozenset
 
 **Frozen sets** in Python are immutable objects that only support methods and operators that produce a result without affecting the frozen set or sets to which they are applied. While elements of a set can be modified at any time, elements of the frozen set remain the same after creation.
 
 If no parameters are passed, it returns an empty frozenset.
-
-    #create normal set
-    mySet = {"Java", "Python", "PHP"}
+```python
+#create normal set
+mySet = {"Java", "Python", "PHP"}
     
-    #create frozenset from set
-    fSet = frozenset(mySet)
+#create frozenset from set
+fSet = frozenset(mySet)
     
-    print(fSet)
+print(fSet)
+```
 
 ### V) Dict Categery Data Types:
 
@@ -132,9 +147,10 @@ If no parameters are passed, it returns an empty frozenset.
 #### Example of Dictionary in Python
 
 Dictionary holds **key:value** pair. Key-Value is provided in the dictionary to make it more optimized.
-
-    myDict = {1: 'Java', 2: 'Python', 3: 'PHP'}
-    print(myDict)
+```python
+myDict = {1: 'Java', 2: 'Python', 3: 'PHP'}
+print(myDict)
+```
 
 ### VI) None Type Categery Data Types:
 
@@ -145,3 +161,12 @@ Dictionary holds **key:value** pair. Key-Value is provided in the dictionary to 
 There is only one copy of that object in a given Python interpreter session.
 
 If you write a function, and that function doesn't use an explicit `return` statement, `None` is returned instead, for example. That way, programming with functions is much simplified; a function **always** returns _something_, even if it is only that one `None` object.
+
+```python
+def myFunc():
+	x = 10 #assigning value to variable, but not returing anything from function.
+    
+a = myFunc()
+
+print(a) #a will be of nonetype.
+```
