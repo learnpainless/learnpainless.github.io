@@ -68,7 +68,7 @@ Both `bytes` and `bytearay` provide functions to encode and decode strings.
 
 Range is used to create sequence of numbers, we can use range() function to create range.
 
-for example 
+for example
 
 x = range(10)
 
@@ -86,18 +86,62 @@ this will create sequence starts with 3 and ends with 7.
 
 #### 9. list
 
+**Python Lists** are just like dynamically sized arrays, declared in other languages (vector in C++ and ArrayList in Java). In simple language, a list is a collection of things, enclosed in \[ \] and separated by commas.
+
+    myList = ["Java", "Python", "PHP"]
+    print(myList)
+
 #### 10. tuple
+
+**Tuple** is a collection of Python objects much like a list. The sequence of values stored in a tuple can be of any type, and they are indexed by integers.
+
+Values of a tuple are syntactically separated by ‘commas’. Although it is not necessary, it is more common to define a tuple by closing the sequence of values in parentheses. This helps in understanding the Python tuples more easily.
+
+    myTuple = ("Java", "Python", "PHP")
+    print(myTuple)
 
 ### IV) Set Categery Data Types:
 
 #### 11. set
 
+In Python, a **Set** is an unordered collection of data types that is iterable, mutable and has no duplicate elements. The order of elements in a set is undefined though it may consist of various elements. The major advantage of using a set, as opposed to a list, is that it has a highly optimized method for checking whether a specific element is contained in the set.
+
+    mySet = {"Java", "Python", "PHP"}
+    print(mySet)
+
 #### 12. frozenset
+
+**Frozen sets** in Python are immutable objects that only support methods and operators that produce a result without affecting the frozen set or sets to which they are applied. While elements of a set can be modified at any time, elements of the frozen set remain the same after creation.
+
+If no parameters are passed, it returns an empty frozenset.
+
+    #create normal set
+    mySet = {"Java", "Python", "PHP"}
+    
+    #create frozenset from set
+    fSet = frozenset(mySet)
+    
+    print(fSet)
 
 ### V) Dict Categery Data Types:
 
 #### 13. dict
 
+**Dictionary in Python** is a collection of keys values, used to store data values like a map, which, unlike other data types which hold only a single value as an element.
+
+#### Example of Dictionary in Python
+
+Dictionary holds **key:value** pair. Key-Value is provided in the dictionary to make it more optimized.
+
+    myDict = {1: 'Java', 2: 'Python', 3: 'PHP'}
+    print(myDict)
+
 ### VI) None Type Categery Data Types:
 
 #### 14. nonetype
+
+`None` is just a value that commonly is used to signify 'empty', or 'no value here'. It is a _signal object_; it only has meaning because the Python documentation says it has that meaning.
+
+There is only one copy of that object in a given Python interpreter session.
+
+If you write a function, and that function doesn't use an explicit `return` statement, `None` is returned instead, for example. That way, programming with functions is much simplified; a function **always** returns _something_, even if it is only that one `None` object.
