@@ -9,7 +9,7 @@ tags:
 - Android
 - iOS
 - Sliver
-image: ''
+image: "./img/sliver.jpg"
 description: Whether you're looking to add a little flair to your app or want to build
   something completely new, sliver widgets are a great way to get started with Flutter.
 author:
