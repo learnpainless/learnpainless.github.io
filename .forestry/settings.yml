@@ -19,6 +19,9 @@ sections:
   label: Posts
   create: all
   match: "**/*"
+  new_doc_ext: ".mdx"
+  templates:
+  - post
 upload_dir: content/posts/img
 public_path: "./img"
 front_matter_path: ''
