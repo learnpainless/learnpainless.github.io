@@ -74,6 +74,7 @@ fields:
   hidden: true
 pages:
 - content/posts/flutter-workmanager-not-working-in-release-mode-working-in-debug-mode.md
+- content/posts/how-getx-flutter-can-help-you-create-better-forms-with-statelesswidget.md
 - content/posts/how-to-use-flutter-s-sliver-widgets-to-create-stunning-effects.md
 - content/posts/python-tutorial-for-beginners-basic-introduction-to-python.md
 - content/posts/python-tutorial-for-beginners-data-types-in-python.md
