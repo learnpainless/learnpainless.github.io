@@ -1,0 +1,99 @@
+---
+date: 2022-10-18T15:45:35+05:30
+layout: post
+comments: true
+title: How to get column from a multidimensional with nested key in PHP
+categories:
+- PHP
+tags:
+- array
+- Multidimensional array
+image: "./img/get-column-from-a-multidimensional.jpg"
+description: How to get column from a multidimensional with nested key in php
+author:
+- Pawneshwer
+draft: false
+
+---
+## Question : How to get column from a multidimensional with nested key in PHP
+
+**Answer :** There are multiple solutions nested `array_column()`, `foreach`, `array_walk_recursive()`
+
+#### Berief Explaination on this topic:
+
+### Question : How to get column from a multidimensional with nested key in PHP
+
+I have an array which is multidimensional. I have to pull a key as column but it is nested. like object accessing how to achieve this with minimum line of code or optimized.
+
+```php
+$array = [
+    [
+        'price' => [
+            'cost' => 200, 'tax' => 10, 'total' => 210
+        ],
+        'otherKey' => 'etc'
+    ],
+
+    [
+        'price' => [
+            'cost' => 500, 'tax' => 50, 'total' => 550
+        ],
+        'otherKey' => 'etc'
+    ],
+    [
+        'price' => [
+            'cost' => 600, 'tax' => 60, 'total' => 660
+        ],
+        'otherKey' => 'etc'
+    ],
+];
+```
+
+#### using nested `array_column()` method:
+
+```php
+$result = array_column(array_column($array, 'price'), 'total');
+printf($result); 
+```
+
+> array: \[
+> 0 => 210
+> 1 => 550
+> 2 => 660
+> \]
+
+#### using `foreach` method:
+
+```php
+$result = [];
+foreach ($array as $value) {
+    $result[] = $value['price']['total'];
+}
+printf($result);
+```
+
+#### using use `array_walk_recursive()` method:
+
+```php
+$totals = [];
+array_walk_recursive(
+    $array,
+    function($leafNode, $key) use(&$totals) {
+        if ($key === 'total') {
+            $totals[] = $leafNode;
+        }
+    }
+);
+printf($totals);
+```
+
+### Total Answers 3
+
+**Answers 1** : of How to get column from a multidimensional with nested key
+foreach is better way to do that even you can do a benchmark for performance you can have idea.
+
+**Answers 2** : of How to get column from a multidimensional with nested key
+The simple foreach should do the job, you could also write a function which takes a string as input, splits it and retrieves the values from the array.
+
+**Answers 3** : of How to get column from a multidimensional with nested key
+It will only visit "**leafnodes**" so it spares you from needing to check if an element is an array or not.
