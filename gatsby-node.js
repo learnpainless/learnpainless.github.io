@@ -3,12 +3,19 @@ const _ = require('lodash')
 const moment = require('moment')
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const express = require(`express`)
+const { google } = require('googleapis')
+
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+const key = process.env.PRIVATE_KEY.replace(new RegExp('\\\\n', '\g'), '\n')
+//console.log(key)
 
 exports.onCreateDevServer = ({ app }) => {
   app.use(express.static(`public`))
 }
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions
 
   createRedirect({ fromPath: '/archive.html', toPath: '/archive', isPermanent: true });
@@ -128,6 +135,8 @@ exports.createPages = ({ graphql, actions }) => {
     })
     // Eliminate duplicate tags
     tags = _.uniq(tags)
+
+    //console.log(tags)
 
     // Make tag pages
     tags.forEach(tag => {

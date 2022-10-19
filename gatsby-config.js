@@ -142,6 +142,7 @@ module.exports = {
             {
               allMdx(
                 sort: {order: DESC, fields: [frontmatter___date]},
+                filter: {frontmatter: {draft: {ne: true}}}
                 limit: 100,
                 ) {
                 edges {
@@ -153,6 +154,7 @@ module.exports = {
                       date
                       title
                       description
+                      draft
                     }
                   }
                 }

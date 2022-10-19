@@ -3,7 +3,7 @@ title: Android Drawable Importer plugin not working in Android Studio 4
 date: 2020-03-18 02:37:00 +05:30
 categories:
 - android
-- IDE
+- ide
 tags:
 - Android Studio 4
 - Drawable Importer

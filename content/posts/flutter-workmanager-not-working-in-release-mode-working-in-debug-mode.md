@@ -1,6 +1,6 @@
 ---
 categories:
-- flutter
+- Flutter
 author:
 - pawneshwer
 layout: post

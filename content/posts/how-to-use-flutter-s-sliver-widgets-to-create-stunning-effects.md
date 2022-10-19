@@ -6,7 +6,7 @@ title: How to use Flutter's Sliver Widgets to create stunning effects
 categories:
 - Flutter
 tags:
-- Android
+- android
 - iOS
 - Sliver
 image: "./img/sliver.jpg"
