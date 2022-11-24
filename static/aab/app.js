@@ -10,8 +10,11 @@
  */
 
 window.addEventListener('load', (event) => {
-
-  detectAdblock().then((res) => {
+  if( window.pawn === undefined ){
+    // adblocker detected, show fallback
+    console.log('adblock detected!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+  }
+  /* detectAdblock().then((res) => {
     //console.log(res)
     let blocked = res.uBlockOrigin || res.adblockPlus
     //let detector = document.getElementById('detector')
@@ -29,7 +32,7 @@ window.addEventListener('load', (event) => {
       detector.innerHTML = '';
       document.body.appendChild(detector)
     }
-  })
+  }) */
 
 })
 function detectAdblock() {
