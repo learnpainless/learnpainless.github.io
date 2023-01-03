@@ -1,0 +1,54 @@
+---
+date: 2023-01-03T10:43:45+05:30
+layout: post
+comments: true
+title: Flutter hive DB example
+categories:
+- Flutter
+tags:
+- Flutter
+- Hive
+image: "./img/flutter-hive-db-example.png"
+description: Hive is an efficient and lightweight key-value database written in pure
+  Dart. It can be used to store small amounts of data, such as application preferences
+author:
+- Pawneshwer
+draft: false
+
+---
+Hive is an efficient and lightweight key-value database written in pure Dart. It can be used to store small amounts of data, such as application preferences or cache data, that you want to persist between app launches. Hive is fast, can store large amounts of data, and is easy to use. It's also easy to set up and integrate into your Flutter projects.
+
+To use Hive in your Flutter app, you will need to install the hive and hive_flutter packages. Then, you can use the Hive API to open a database, read and write data, and perform other operations. Here's an example of how to use Hive to store and retrieve a list of integers:
+
+Hive also supports a variety of data types, including lists, sets, and maps, as well as custom objects by using adapters. You can learn more about using Hive in the documentation: [**https://docs.hivedb.dev/**](https://docs.hivedb.dev/ "https://docs.hivedb.dev/")
+
+Hive is a fast, reliable, and lightweight key-value database for Flutter. Here's an example of how you can use it in your Flutter app:
+
+```
+import 'package:hive/hive.dart';
+
+void main() async {
+  // open the database
+  var box = await Hive.openBox('myBox');
+
+  // add an item to the database
+  await box.put('key', 'value');
+
+  // check if the database contains an item
+  print(box.containsKey('key')); // prints 'true'
+
+  // get the value for a key
+  print(box.get('key')); // prints 'value'
+
+  // delete an item from the database
+  await box.delete('key');
+
+  // close the database
+  box.close();
+}
+
+```
+
+This example shows how to open a database, add an item, check if an item exists, get the value for a key, delete an item, and close the database.
+
+For more information on how to use Hive in your Flutter app, check out the [**Hive documentation**](https://pub.dev/documentation/hive/latest/).
