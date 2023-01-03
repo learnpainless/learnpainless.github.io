@@ -12,14 +12,20 @@ fields:
 - name: categories
   type: list
   config:
-    use_select: false
+    use_select: true
     min: 1
     max: 
     source:
-      type: pages
+      type: simple
       section: categories
       file: 
       path: ''
+    options:
+    - Python
+    - Android
+    - Java
+    - PHP
+    - Flutter
   label: Categories
 - type: list
   name: tags
