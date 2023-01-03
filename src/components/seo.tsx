@@ -170,7 +170,15 @@ const SEO: React.FunctionComponent<SEOProps> = ({
                   "@type": "SearchAction",
                   "target": "${site.siteMetadata.siteUrl}/search-result.html?cx=partner-pub-7943122633795545%3A3898700314&cof=FORID%3A10&ie=UTF-8&q={search_term_string}",
                   "query-input": "required name=search_term_string"
-              }
+              },
+              "sameAs": [
+                "https://www.facebook.com/LearnPainLess/",
+                "https://twitter.com/LearnPainLess",
+                "https://www.instagram.com/learnpainless/",
+                "https://in.pinterest.com/learnpainless/",
+                "https://learnpainless.tumblr.com/",
+                "https://www.linkedin.com/company/prolong-services/"
+              ]
             },
             {
               "@context": "http://schema.org",
@@ -186,10 +194,12 @@ const SEO: React.FunctionComponent<SEOProps> = ({
                   "height": 150
               },
               "sameAs": [
-                  "https://www.facebook.com/LearnPainLess/",
-                  "https://twitter.com/LearnPainLess",
-                  "https://www.instagram.com/learnpainless/",
-                  "https://www.linkedin.com/company/prolong-services/"
+                "https://www.facebook.com/LearnPainLess/",
+                "https://twitter.com/LearnPainLess",
+                "https://www.instagram.com/learnpainless/",
+                "https://in.pinterest.com/learnpainless/",
+                "https://learnpainless.tumblr.com/",
+                "https://www.linkedin.com/company/prolong-services/"
               ]
             },
             {
@@ -251,6 +261,14 @@ const SEO: React.FunctionComponent<SEOProps> = ({
                       "height": 150
                   }
               },
+              "sameAs": [
+                "https://www.facebook.com/LearnPainLess/",
+                "https://twitter.com/LearnPainLess",
+                "https://www.instagram.com/learnpainless/",
+                "https://in.pinterest.com/learnpainless/",
+                "https://learnpainless.tumblr.com/",
+                "https://www.linkedin.com/company/prolong-services/"
+              ],
               "author": [
                   {
                       "@context": "http://schema.org",
