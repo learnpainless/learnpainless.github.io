@@ -1,0 +1,34 @@
+---
+date: 2023-01-03T17:09:28+05:30
+layout: post
+comments: true
+title: How to Solve the Flutter Inappwebview Keyboard Not Showing Problem
+categories:
+- Flutter
+tags:
+- WebView
+- Flutter
+image: "./img/flutter-inappwebview-keyboard-not-showing.png"
+description: Learn how to fix your Flutter Inappwebview Keyboard problem effortlessly
+  with this comprehensive, step-by-step guide that walks you through every possible
+  sol
+author:
+- Pawneshwer
+draft: false
+
+---
+Are you experiencing issues with the keyboard not displaying while using Flutter's inappwebview? If so, it could be caused by several different things such as incorrect keyboard settings or an incompatible web view. Try going into the settings to adjust the keyboard settings and make sure to use a compatible web view.
+
+There could be several reasons why the keyboard is not showing up when using the **`InAppWebView`** widget in Flutter. 
+
+#### Here are a few things you can try:
+
+1. Make sure that the **`InAppWebView`** widget has focus. You can give it focus by calling the **`requestFocus`** method on the **`InAppWebViewController`** after the webview has finished loading.
+2. If you are using a physical keyboard, make sure that it is connected and turned on.
+3. If you are running on an Android device, try adding the **`android:windowSoftInputMode`** attribute to the **`AndroidManifest.xml`** file and setting it to **`"adjustResize"`**. This will cause the window to be resized when the keyboard is shown, making sure that the **`InAppWebView`** widget is not obscured by the keyboard.
+4. Make sure that there are no errors being thrown in the console. If there are, try to resolve them and see if that fixes the issue.
+5. just wrap your WebView inside Scaffold widget and apply following property inside scaffold.
+
+       resizeToAvoidBottomInset: false,
+
+I hope this helps! Let me know if you have any other questions.
