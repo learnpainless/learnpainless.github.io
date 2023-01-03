@@ -1,0 +1,32 @@
+---
+date: 2023-01-03T19:05:43+05:30
+tags:
+- Flutter
+- object
+layout: post
+comments: true
+title: Get value from object flutter
+categories:
+- Flutter
+image: ''
+description: Get value from object flutter Multiple ways to access
+author:
+- Pawneshwer
+draft: true
+
+---
+In Flutter, you can retrieve the value of an object's property using the **`.`** operator.
+
+    String name = person.name;
+
+If the object is **`null`**, attempting to access a property on it will throw a **`NoSuchMethodError`**. You can prevent this by first checking if the object is **`null`** before trying to access its properties.
+
+    if (person != null) {
+      String name = person.name;
+    }
+
+You can also use the **`?.`** operator to safely access the property of an object. This operator will return **`null`** if the object is **`null`**, rather than throwing an error.
+
+    String name = person?.name;
+
+If you want to retrieve the value of a property on an object that may be **`null`**, using the **`?.`** operator is a good way to do it safely.
