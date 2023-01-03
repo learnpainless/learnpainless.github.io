@@ -1,0 +1,39 @@
+---
+date: 2023-01-03T10:23:07+05:30
+layout: post
+comments: true
+title: Flutter URL Launcher not working on IOS
+categories:
+- Flutter
+tags:
+- iOS
+- Flutter
+- Uniform Resource Locator
+image: "./img/flutter-url-launcher-not-working-on-ios.png"
+description: Flutter URL Launcher not working on IOS bue to misconfiguration, lets
+  discuss about possible solutions for this
+author:
+- Pawneshwer
+draft: false
+
+---
+There could be a few reasons why the **Flutter** URL Launcher plugin is not working on **iOS**. Here are some things you can try:
+
+1. Make sure you have added the **`url_launcher`** dependency in your **`pubspec.yaml`** file and run **`flutter pub get`** to install the package.
+2. Make sure you have added the **`LSApplicationQueriesSchemes`** key to your **`Info.plist`** file, with an array value that includes the URL schemes you want to open. For example:
+
+```
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>googlechrome</string>
+  <string>googlechromes</string>
+  <string>http</string>
+  <string>https</string>
+</array>
+
+```
+
+3. If you are using the **`canLaunch`** method to check if the URL can be opened, make sure to add the URL schemes to your **`Info.plist`** file as described in step 2.
+4. If you are using the **`launch`** method to open the URL, make sure that the URL you are trying to open is a valid URL and can be opened in a browser on your device.
+
+I hope this helps! Let me know if you have any other questions or if these suggestions do not solve the issue.
