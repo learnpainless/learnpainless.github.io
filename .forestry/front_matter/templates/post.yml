@@ -27,8 +27,9 @@ fields:
     - PHP
     - Flutter
   label: Categories
-- type: list
-  name: tags
+- name: tags
+  type: tag_list
+  default: []
   label: Tags
 - type: file
   name: image
