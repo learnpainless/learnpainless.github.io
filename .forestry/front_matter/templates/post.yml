@@ -73,6 +73,7 @@ fields:
   default: true
   hidden: true
 pages:
+- content/posts/creating-a-simple-but-powerful-flutter-redux-login-example.mdx
 - content/posts/flutter-hive-db-example.mdx
 - content/posts/flutter-url-launcher-not-working-on-ios.mdx
 - content/posts/flutter-workmanager-not-working-in-release-mode-working-in-debug-mode.md
