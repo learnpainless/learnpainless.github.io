@@ -8,11 +8,11 @@ comments: true
 title: Get value from object flutter
 categories:
 - Flutter
-image: ''
+image: "./img/get-value-from-object-flutter.png"
 description: Get value from object flutter Multiple ways to access
 author:
 - Pawneshwer
-draft: true
+draft: false
 
 ---
 In Flutter, you can retrieve the value of an object's property using the **`.`** operator.
@@ -30,3 +30,15 @@ You can also use the **`?.`** operator to safely access the property of an objec
     String name = person?.name;
 
 If you want to retrieve the value of a property on an object that may be **`null`**, using the **`?.`** operator is a good way to do it safely.
+
+If object is Map type then you can get value by key value pair using \[\]. instead of '.' operator.
+
+for example
+
+    String name = persion['name'];
+
+You can also use the **`?.`** operator to safely access the property of an object. This operator will return **`null`** if the object is **`null`**, rather than throwing an error.
+
+for example:
+
+    String? name = persion?['name'];
