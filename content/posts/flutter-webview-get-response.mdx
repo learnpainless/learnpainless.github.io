@@ -1,0 +1,26 @@
+---
+date: 2023-01-04T10:32:21+05:30
+tags:
+- Flutter
+- Webview
+layout: post
+comments: true
+title: Flutter webview get response
+categories:
+- Flutter
+image: "./img/flutter-webview-get-response.png"
+description: Flutter webview get response to use inside you app
+author:
+- Pawneshwer
+draft: false
+
+---
+import Gist from 'react-gist'
+
+To get the response of a WebView in Flutter, you can use the **`WebViewController`**'s **`future`** **`evaluateJavascript`** method. Here is an example of how you can use it:
+
+<Gist id='4e1026c190af9099120fe610203b285e' />
+
+This will print the inner text of the body element of the web page in the WebView to the console when the floating action button is pressed.
+
+Keep in mind that **`evaluateJavascript`** returns a **`Future`** that resolves to a **`String`**, so you need to use **`await`** when calling it.
