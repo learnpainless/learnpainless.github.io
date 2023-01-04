@@ -1,0 +1,111 @@
+---
+title: Send multiple files to server using retrofit2
+date: 2016-10-23 13:58:00 Z
+categories:
+- android
+- retrofit2
+tags:
+- android
+- retrofit2
+- api
+- json
+layout: post
+modified_time: 2016-10-23 13:58
+author: [lpl]
+description: send multiple images to server retrofit2,send multiple images to retrofit2,send
+  multiple files and text to retrofit2,send files using retrofit2 easily
+keywords: upload files,upload images,retrofit2 api
+comments: true
+image: img/send-multiple-files-to-server-using-retrofi2-min.png
+---
+import Gist from 'react-gist'
+
+## Send multiple files to server using retrofit2
+If you want to send multiple [files](http://en.wikipedia.org/wiki/Computer_file "Computer file"),Images, Text etc then you need to send that whole data as MultipartTypedOutput. This is same as Multipart Entity in [HTTP](http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol "Hypertext Transfer Protocol") Client & Post.
+
+## [If you are using Retrofit then follow this guide.](/android/retrofit/send-multiple-files-to-server-using-retrofit-1-9)
+
+## So lets start :
+
+this is my [server](http://en.wikipedia.org/wiki/Server_%28computing%29 "Server (computing)") url where i m going to [upload](http://en.wikipedia.org/wiki/Uploading_and_downloading "Uploading and downloading") files :
+
+```xml
+http://192.168.1.105/learnpainless/android/file_upload/fileUpload.php
+and these are parameters : image,email,website
+```
+
+To send files to server we need to use **POST** method instead of **GET** method. I assume that you must know about **POST** and **GET** methods and you also know about how to use Retrofit2 [API](http://en.wikipedia.org/wiki/Application_programming_interface "Application programming interface"). and then we will attach "**MultipartTypedOutput**" to Body of our response to send over **POST** method.
+
+*   First steps is to know what server will respond back when you submit data. and then make Getter Setter of that response. In this example my server will give following response as [JSON](http://en.wikipedia.org/wiki/JSON "JSON") [Feed :](http://en.wikipedia.org/wiki/Feed_URI_scheme "Feed URI scheme")
+
+```json
+{
+  "file_name":"defiance-wallpaper-1920x1080.jpg",
+  "email":"test@gmail.com",
+  "website":"www.learnpainless.com",
+  "message":"File uploaded successfully!",
+  "error":false,
+  "file_path":"http://192.168.1.105/android/file_upload/uploads/defiance-wallpaper-1920x1080.jpg"
+}
+```
+
+*   So i will make Getter Setter file according to that response.
+
+*   So open Android Studio and create new Project , if you want to embed in old project then skip this step.
+*   Now open Build.gradle file of app directory as shown in below screenshot.
+*   and add Retrofit2's compile dependency as shown below :
+
+[![Send multiple files to server using retrofit2](img/build-gradle-add.png)](img/build-gradle-add.png)
+
+[![Send multiple files to server using retrofit2](img/build-gradle.png)](img/build-gradle.png)
+
+```
+compile 'com.squareup.retrofit2:retrofit:2.1.0'
+compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+```
+
+*   and click on sync project, and wait till android studio download all required files.
+*   When build finish goto app/java/YOUR_PACKAGE_NAME/ (in this example my package name is **com.learnpainless.uploadfiles** ).
+*   And create new class for getter-setters, i will name that file as "**ResponsePojo.class**".
+*   and make getter-setters according to [Server](http://en.wikipedia.org/wiki/Web_server "Web server") response. my getter setter will look like below :
+*   Ok so now create new Java Class name it as "**SubmitAPI**" and Kind will be **Interface**. as shown in below screenshot.
+
+[![Send multiple files to server using retrofit2](img/interface.png)](img/interface.png)
+
+*   and write below code
+
+<Gist id='faf8c47cb8a6437dfc60bc4f0b03d40a' />
+
+* open **MainActivity.java** class and create String value for url of server.The URL should be end with '/' as per Retrofit2.
+
+```java
+String ROOT_URL = "http://192.168.1.105/learnpainless/android/";
+```
+* this is content of my **activity_main.xml** file
+
+<Gist id='fc2e5f4e200f4d51da020054b1f042e4' />
+
+* this is content of <span style="color: #800080;">**MainActivity.java**</span>
+
+<Gist id='be6d54c482879f004888c9cfac88f45a' />
+
+*   content of <span style="color: #800080;">**ResponsePojo.java**</span> file
+
+<Gist id='08baad91237069821f91352b44d858be' />
+
+*   content of <span style="color: #800080;">**SubmitAPI.java**</span> file
+
+<Gist id='faf8c47cb8a6437dfc60bc4f0b03d40a' />
+
+*   In <span style="color: #800080;">**AndroidManifest.xml**</span> file add these 3 permissions
+
+<Gist id='a57b79d36d2bac654b058a94f4630fb2' />
+
+*   Now run your app in device and try to upload images.
+
+[![Send multiple files to server using retrofit2](img/Screenshot_2016-05-22-22-43-46.jpg)](img/Screenshot_2016-05-22-22-43-46.jpg)
+
+[![Send multiple files to server using retrofit2](img/Screenshot_2016-05-22-22-44-06.jpg)](img/Screenshot_2016-05-22-22-44-06.jpg)
+
+[![Send multiple files to server using retrofit2](img/Screenshot_2016-05-22-22-44-53.jpg)](img/Screenshot_2016-05-22-22-44-53.jpg)
