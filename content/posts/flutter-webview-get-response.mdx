@@ -5,17 +5,21 @@ tags:
 - Webview
 layout: post
 comments: true
-title: Flutter webview get response
+title: Using JavaScript to Capture Responses in a Flutter WebView
 categories:
 - Flutter
 image: "./img/flutter-webview-get-response.png"
-description: Flutter webview get response to use inside you app
+description: Make the most of Flutter WebView integration-learn to use JavaScript
+  code to efficiently fetch and obtain responses directly from a website using this
+  guide
 author:
 - Pawneshwer
 draft: false
 
 ---
 import Gist from 'react-gist'
+
+If you are using a Flutter WebView to display web content and need to capture the response from this content, you can use JavaScript for this purpose. This allows developers to communicate between their Flutter app and the web content that is being displayed in the WebView. With this method, developers can get responses and utilize them for various purposes such as user authentication or form submissions.
 
 To get the response of a WebView in Flutter, you can use the **`WebViewController`**'s **`future`** **`evaluateJavascript`** method. Here is an example of how you can use it:
 
