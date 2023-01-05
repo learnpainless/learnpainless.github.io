@@ -1,0 +1,45 @@
+---
+date: 2023-01-05T10:19:11+05:30
+tags:
+- Flutter
+- Listview
+- Animation
+layout: post
+comments: true
+title: Horizontal listview animation in Flutter
+categories:
+- Flutter
+image: "./img/horizontal-listview-animation-in-flutter.png"
+description: Learn how to animate Flutter ListViews with this in-depth guide We will
+  be creating horizontal listview animations with step-by-step directions and code
+  samples
+author:
+- Pawneshwer
+draft: false
+
+---
+import Gist from 'react-gist'
+
+In Flutter, a horizontal listview animation allows users to quickly and easily display a large amount of data in an organized and efficient manner. This type of animation is achieved by creating a ListView widget, which consists of multiple items arranged horizontally. These entries can have custom animations such as transitioning from left to right on entry and left to right on exit. When used correctly, the Horizontal ListView animation can be highly effective in displaying vast amounts of data in an aesthetically pleasing way.
+
+To create a horizontal list view in Flutter, you can use a **`ListView.builder`** widget and set the **`scrollDirection`** property to **`Axis.horizontal`**. You can also use a **`SingleChildScrollView`** widget with the **`scrollDirection`** set to **`Axis.horizontal`**.
+
+Here is an example of a horizontal list view using a **`ListView.builder`**:
+
+<Gist id='6a81cb35f7e634aa559676727045ec32' file='ListView.builder.dart' />
+
+If you want to animate the transition between items in the list view, you can use a **`PageView.builder`** widget instead. The **`PageView.builder`** widget allows you to build a scrollable list of widgets that are arranged horizontally, and it also provides built-in support for swipe-based navigation and page transitions.
+
+Here is an example of a horizontal list view using a **`PageView.builder`**:
+
+<Gist id='6a81cb35f7e634aa559676727045ec32' file='PageView.builder.dart' />
+
+To control the animation duration and curve, you can use the **`pageController`** property of the **`PageView.builder`** widget. For example:
+
+<Gist id='6a81cb35f7e634aa559676727045ec32' file='pageController.dart' />
+
+You can then use the **`animateToPage`** method of the **`PageController`** to animate the transition between pages.
+
+<Gist id='6a81cb35f7e634aa559676727045ec32' file='animateToPage.dart' />
+
+I hope this helps! Let me know if you have any questions.
