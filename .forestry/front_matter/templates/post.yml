@@ -84,6 +84,7 @@ pages:
 - content/posts/firebase-push-notification-badge-count-flutter.mdx
 - content/posts/flutter-hive-db-example.mdx
 - content/posts/flutter-install-apk-programmatically.mdx
+- content/posts/flutter-split-string-by-regex.mdx
 - content/posts/flutter-url-launcher-not-working-on-ios.mdx
 - content/posts/flutter-webview-get-response.mdx
 - content/posts/flutter-workmanager-not-working-in-release-mode-working-in-debug-mode.md

@@ -1,0 +1,62 @@
+---
+date: 2023-01-05T11:18:58+05:30
+tags:
+- Flutter
+- Regex
+layout: post
+comments: true
+title: Flutter split string by regex
+categories:
+- Flutter
+image: "./img/flutter-split-string-by-regex.png"
+description: Need to learn how to use Regex for string splitting in Flutter? Take
+  a look at our comprehensive tutorial full of helpful tips and tricks to master the
+  process
+author:
+- Pawneshwer
+draft: false
+
+---
+Splitting a string in Flutter using regex is an easy process. You just need to provide the regular expression (regex) as the parameter for the String.split() function, and it will return a list containing all the substrings split by the pattern. This makes it possible to separate strings based on specific criteria, for example, strings that only contain letters or strings that have multiple words and spaces in them.
+
+To split a string by a regular expression in Flutter, you can use the **`split()`** method of the **`RegExp`** class. Here's an example of how you can use it:
+
+    import 'package:flutter/widgets.dart';
+    
+    void main() {
+      String s = "This is a test string";
+    
+      // Split the string by one or more whitespace characters
+      RegExp regExp = RegExp(r"\s+");
+      List<String> words = regExp.split(s);
+    
+      print(words);  // Output: [This, is, a, test, string]
+    }
+    
+
+The **`split()`** method returns a list of strings that are obtained by splitting the original string by the regular expression. In the example above, the regular expression **`\s+`** matches one or more whitespace characters, so the string is split by any sequence of whitespace characters.
+
+Here is Different example of using Split
+
+    import 'package:flutter/widgets.dart';
+    
+    void main() {
+      String input = 'abc123def456';
+      RegExp regex = RegExp(r'\d+');
+      List<String> split = regex.split(input);
+      print(split);
+      // Output: ['abc', 'def']
+    }
+    
+
+The **`split`** method returns a list of strings that were separated by the regular expression. In this case, the regular expression is **`r'\d+'`**, which matches one or more digits. The input string is **`'abc123def456'`**, and the resulting list is **`['abc', 'def']`**.
+
+You can also use the **`split`** method of the **`String`** class if you don't need to use a regular expression. For example:
+
+    String input = 'abc123def456';
+    List<String> split = input.split('123');
+    print(split);
+    // Output: ['abc', 'def456']
+    
+
+This will split the input string at the first occurrence of the string '123', resulting in the list **`['abc', 'def456']`**.
