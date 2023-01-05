@@ -81,6 +81,7 @@ fields:
   hidden: true
 pages:
 - content/posts/creating-a-simple-but-powerful-flutter-redux-login-example.mdx
+- content/posts/firebase-push-notification-badge-count-flutter.mdx
 - content/posts/flutter-hive-db-example.mdx
 - content/posts/flutter-install-apk-programmatically.mdx
 - content/posts/flutter-url-launcher-not-working-on-ios.mdx

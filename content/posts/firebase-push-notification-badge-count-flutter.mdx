@@ -1,0 +1,38 @@
+---
+date: 2023-01-05T10:00:25+05:30
+tags:
+- Flutter
+- Firebase
+- Push Notifications
+- FCM
+- APS
+layout: post
+comments: true
+title: Firebase push notification badge count flutter
+categories:
+- Flutter
+image: "./img/firebase-push-notification-badge-count-flutter.png"
+description: Struggling to implement a push notification badge count in your Flutter
+  app? Discover the simple steps for setting up Firebase and Flutter with notifications.
+author:
+- Pawneshwer
+draft: false
+
+---
+import Gist from 'react-gist'
+
+Flutter makes it easy to use Firebase’s Notifications API and iOS Push Notifications to display a badge count on supported devices. Implementing this feature will allow your users to stay up-to-date with notifications that they have not yet interacted with directly. By leveraging the power of Firebase, you can easily deliver rich notifications straight to a user’s device in near real-time.
+
+To set the badge count on a push notification in Flutter, you can use the **`badge`** field in the **`notification`** payload of the message.
+
+Here's an example of how you might set the badge count to 5 when sending a notification using the Firebase Cloud Messaging (FCM) package:
+
+<Gist id='59345e90717fb70b6ceeff25064eb7f8' file='notification_badge_fcm.dart' />
+
+This will cause the badge count on the app icon to be set to 5 when the notification is received on the device.
+
+If you want to update the badge count for all notifications, you can set the **`badge`** field in the **`aps`** object of the payload. Here's an example of how you might do this using the FCM package:
+
+<Gist id='59345e90717fb70b6ceeff25064eb7f8' file='notification_badge_aps.dart' />
+
+Keep in mind that the badge count is not automatically cleared when the user opens the app or dismisses the notification. You will need to clear the badge count manually by setting it to 0 or calling the **`setApplicationIconBadgeNumber`** method of the **`UIApplication`** class in iOS, or the **`setBadge`** method of the **`ShortcutBadger`** class in Android.
