@@ -80,7 +80,7 @@ fields:
   default: true
   hidden: true
 pages:
-- content/posts/a-comprehensive-guide-to-setting-up-path-provider-in-flutter.mdx
+- content/posts/comprehensive-guide-setting-path-provider-flutter.mdx
 - content/posts/creating-a-simple-but-powerful-flutter-redux-login-example.mdx
 - content/posts/firebase-push-notification-badge-count-flutter.mdx
 - content/posts/flutter-hive-db-example.mdx
