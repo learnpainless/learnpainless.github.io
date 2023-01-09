@@ -1,0 +1,69 @@
+---
+title: How to implement SSL Pinning in your Flutter App
+date: 2020-08-01T06:37:00+05:30
+categories:
+- Flutter
+tags:
+- SSL-pinning
+- security
+- featured
+author: [pawneshwer]
+description: How to implement SSL Pinning in your Flutter App, prevent your flutter app from hijack attack by hackers by using this security feature to match certificates
+comments: true
+layout: post
+draft: false
+image: img/how-implement-ssl-pinning-your-flutter-app.png
+---
+import Gist from 'react-gist'
+
+## How to implement SSL Pinning in your Flutter App
+
+### What is SSL-pinning?
+
+**SSL-pinning** allows you to pin a server’s key or a public key to the client. one among the foremost efficient ways to realize this in mobile apps is embedding a trusted **SSL certificate**. this manner we ignore the system storage and may manually specify which certificate is trustworthy. This method comes in handy when it's necessary to use a self-signed certificate without having the top user install it.
+
+### Why SSL-pinning needed?
+
+The *HTTP protocol* was susceptible to this attack to start with, therefore a secure version of the protocol was created so as to repair this issue. It uses **SSL** or **TLS** to encrypt the connection between a client and a server. the server sends its certificate to the client for identification. The **X.509 certificate** may be a file that contains the subsequent information:
+
+- Name
+- Public key
+- Serial number
+- Signature algorithm
+- Digital signature
+
+#### The identification process requires that:
+
+- The server name must precisely match the name given within the certificate, otherwise the certificate could also be considered compromised.
+- The SSL certificate chain are often traced from a personal SSL certificate through intermediate certificates to the basis certificate of a trusted certificate authority.
+
+#### Let us check out the second point more closely.
+
+It would be impossible to put in each certificate separately, there are too many of them. Thus, the subsequent certificate management system comes into play. Since certificates are basically server identities, they're doing not appear on their own — they are issued by certificate authorities. The CA certificates, also referred to as root certificates, play the foremost significant role. CAs are publicly available and their keys are trusted by default. they're usually embedded within the OS and obtain updated alongside with it. Certificates operate during a strict hierarchy. CA certificates can sign other certificates which successively sign next-level certificates etc. If a certificate is compromised, it are often revoked along side its child certificates.
+It seems fairly secure but what if the user compromises the certificate storage on their system by installing the intruder’s certificate?
+
+### How to implement SSL-pinning in flutter?
+
+#### Method 1:
+
+Create your client with a `SecurityContext` with no trusted roots to force the bad certificate callback, even for a good certificate.
+
+```dart
+SecurityContext(withTrustedRoots: false);
+```
+
+In the bad certificate callback, parse the **DER encoded certificate** using the [asn1lib package](https://pub.dartlang.org/packages/asn1lib). 
+
+##### For example:
+
+<Gist id='fe79913af737f3553986922aeecb5e35' file='asn1lib.dart' />
+
+#### Method 2:
+
+You can use [ssl_pinning_plugin](https://pub.dev/packages/ssl_pinning_plugin) library. This will Check the equality between the known **SHA-1** or **SHA-256** fingerprint and the **SHA-1** or **SHA-256** of the target server.
+
+##### example code.
+
+<Gist id='fe79913af737f3553986922aeecb5e35' file='ssl_pinning.dart' />
+
+###### Main purpose of using SSL-pinning is to prevent your flutter app from hijack attack, and keep your app secure from hackers.
