@@ -12,9 +12,25 @@ description: Discover how to control your user's navigation through your Flutter
   by disabling the back button and improving user experience.
 author:
 - Pawneshwer
-draft: true
+draft: false
 
 ---
+import Gist from 'react-gist'
+
 ## How do I turn off the back button in Flutter?
 
-**Answer:** To disable the back button in Flutter, you can use a custom WillPopScope widget. Wrap your material app in this widget, preventing the user from using the back button. You can also override the method to have your custom action when the back button is pressed.
+**Answer:** To disable the back button in Flutter, you can use a custom **`WillPopScope`** widget. Wrap your material app in this widget, preventing the user from using the back button. You can also override the method to have your custom action when the back button is pressed.
+
+In Flutter, you can disable the back button by intercepting the back button press event and preventing the default behavior.
+
+One way to do this is to use the **`WillPopScope`** widget. You can wrap the entire body of your app with a **`WillPopScope`** widget and provide an **`onWillPop`** callback function that returns a **`Future`**. The **`onWillPop`** function is called when the back button is pressed. You can prevent the back button from closing the app by returning the **`Future.value(false)`** from this function.
+
+Here's an example of how you can use the **`WillPopScope`** widget to disable the back button:
+
+<Gist id='b43325ca6101528360e43cfb4fb933c5' file='home1.dart' />
+
+In this example, the **`onWillPop`** callback is set to return **`false`**, which will prevent the user from leaving the current screen. If you want to show an alert or any other custom UI before disabling the back button you can use **`showDialog`** to show an alert Dialog, or any other custom UI you want.
+
+<Gist id='b43325ca6101528360e43cfb4fb933c5' file='home2.dart' />
+
+In this example, the **`onWillPop`** callback shows an alert dialog asking the user if they want to leave the current screen. If the user taps "Yes," the callback returns **true**, allowing the user to leave the screen. If the user taps "No," the callback returns **false**, preventing the user from leaving the screen.
