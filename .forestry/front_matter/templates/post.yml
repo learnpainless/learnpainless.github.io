@@ -82,6 +82,7 @@ fields:
 pages:
 - content/posts/comprehensive-guide-setting-path-provider-flutter.mdx
 - content/posts/creating-a-simple-but-powerful-flutter-redux-login-example.mdx
+- content/posts/disable-back-button-flutter-app.mdx
 - content/posts/firebase-push-notification-badge-count-flutter.mdx
 - content/posts/flutter-hive-db-example.mdx
 - content/posts/flutter-install-apk-programmatically.mdx
@@ -91,7 +92,6 @@ pages:
 - content/posts/flutter-workmanager-not-working-in-release-mode-working-in-debug-mode.md
 - content/posts/get-value-from-object-flutter.mdx
 - content/posts/horizontal-listview-animation-in-flutter.mdx
-- content/posts/how-to-disable-back-button-in-flutter-app.mdx
 - content/posts/how-to-get-column-from-a-multidimensional-with-nested-key-in-php.mdx
 - content/posts/how-to-solve-the-flutter-inappwebview-keyboard-not-showing-problem.mdx
 - content/posts/how-to-use-flutter-s-sliver-widgets-to-create-stunning-effects.md
