@@ -91,6 +91,7 @@ pages:
 - content/posts/flutter-workmanager-not-working-in-release-mode-working-in-debug-mode.md
 - content/posts/get-value-from-object-flutter.mdx
 - content/posts/horizontal-listview-animation-in-flutter.mdx
+- content/posts/how-to-disable-back-button-in-flutter-app.mdx
 - content/posts/how-to-get-column-from-a-multidimensional-with-nested-key-in-php.mdx
 - content/posts/how-to-solve-the-flutter-inappwebview-keyboard-not-showing-problem.mdx
 - content/posts/how-to-use-flutter-s-sliver-widgets-to-create-stunning-effects.md
