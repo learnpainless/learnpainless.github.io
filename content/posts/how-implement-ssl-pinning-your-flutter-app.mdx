@@ -1,22 +1,31 @@
 ---
 title: How to implement SSL Pinning in your Flutter App
-date: 2020-08-01T06:37:00+05:30
+date: 2020-08-01T06:37:00.000+05:30
 categories:
 - Flutter
 tags:
 - SSL-pinning
 - security
 - featured
-author: [pawneshwer]
-description: How to implement SSL Pinning in your Flutter App, prevent your flutter app from hijack attack by hackers by using this security feature to match certificates
+- certificates
+- flutter
+- proxy
+- attack
+author:
+- pawneshwer
+description: How to implement SSL Pinning in your Flutter App, prevent your flutter
+  app from hijack attack by hackers by using this security feature to match certificates
 comments: true
 layout: post
 draft: false
 image: img/how-implement-ssl-pinning-your-flutter-app.png
+
 ---
 import Gist from 'react-gist'
 
 ## How to implement SSL Pinning in your Flutter App
+
+**SSL pinning** is an important security feature that can protect **Flutter applications** from **network hijacking** attacks. By configuring your app to use secure _certificates_, you can ensure your users only receive and send data to the appropriate servers. Learn how to set up _SSL pinning_ in your Flutter app and keep hackers away from sensitive data.
 
 ### What is SSL-pinning?
 
@@ -24,18 +33,18 @@ import Gist from 'react-gist'
 
 ### Why SSL-pinning needed?
 
-The *HTTP protocol* was susceptible to this attack to start with, therefore a secure version of the protocol was created so as to repair this issue. It uses **SSL** or **TLS** to encrypt the connection between a client and a server. the server sends its certificate to the client for identification. The **X.509 certificate** may be a file that contains the subsequent information:
+The _HTTP protocol_ was susceptible to this attack to start with, therefore a secure version of the protocol was created so as to repair this issue. It uses **SSL** or **TLS** to encrypt the connection between a client and a server. the server sends its certificate to the client for identification. The **X.509 certificate** may be a file that contains the subsequent information:
 
-- Name
-- Public key
-- Serial number
-- Signature algorithm
-- Digital signature
+* Name
+* Public key
+* Serial number
+* Signature algorithm
+* Digital signature
 
 #### The identification process requires that:
 
-- The server name must precisely match the name given within the certificate, otherwise the certificate could also be considered compromised.
-- The SSL certificate chain are often traced from a personal SSL certificate through intermediate certificates to the basis certificate of a trusted certificate authority.
+* The server name must precisely match the name given within the certificate, otherwise the certificate could also be considered compromised.
+* The SSL certificate chain are often traced from a personal SSL certificate through intermediate certificates to the basis certificate of a trusted certificate authority.
 
 #### Let us check out the second point more closely.
 
@@ -52,7 +61,7 @@ Create your client with a `SecurityContext` with no trusted roots to force the b
 SecurityContext(withTrustedRoots: false);
 ```
 
-In the bad certificate callback, parse the **DER encoded certificate** using the [asn1lib package](https://pub.dartlang.org/packages/asn1lib). 
+In the bad certificate callback, parse the **DER encoded certificate** using the [asn1lib package](https://pub.dartlang.org/packages/asn1lib).
 
 ##### For example:
 
