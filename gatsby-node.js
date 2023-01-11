@@ -139,9 +139,11 @@ exports.createPages = async ({ graphql, actions }) => {
     //console.log(tags)
 
     // Make tag pages
-    tags.forEach(tag => {
+    //console.log(tags)
+    tags.forEach(value => {
+      let tag = `/${value}/i`
       createPage({
-        path: `/tags/${_.kebabCase(tag)}/`,
+        path: `/tags/${_.kebabCase(value)}/`,
         component: tagTemplate,
         context: {
           tag,
@@ -161,9 +163,10 @@ exports.createPages = async ({ graphql, actions }) => {
     categories = _.uniq(categories)
 
     // Make tag pages
-    categories.forEach(category => {
+    categories.forEach(value => {
+      let category = `/${value}/i`
       createPage({
-        path: `/categories/${_.kebabCase(category)}/`,
+        path: `/categories/${_.kebabCase(value)}/`,
         component: categoryTemplate,
         context: {
           category,

@@ -120,7 +120,7 @@ const Sidebar: React.FunctionComponent<SidebarProps> = () => {
         ))}
       </SidebarWidget>
 
-      <SidebarWidget>
+      {/* <SidebarWidget>
         <WidgetTitle>FOLLOW US</WidgetTitle>
         <div className={"fb-page"} data-href="https://www.facebook.com/LearnPainLess" data-tabs="" data-width=""
              data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
@@ -132,7 +132,7 @@ const Sidebar: React.FunctionComponent<SidebarProps> = () => {
       <SidebarWidget>
         <a href="https://twitter.com/LearnPainLess?ref_src=twsrc%5Etfw" className={"twitter-follow-button"}
            data-show-count="false">Follow @LearnPainLess</a>
-      </SidebarWidget>
+      </SidebarWidget> */}
       <SidebarWidget>
         <div className={"g-ytsubscribe"} data-channelid="UCglYchjdo11zTelZVY4QUjA" data-layout="full"
              data-count="default"></div>

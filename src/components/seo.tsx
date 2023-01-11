@@ -328,14 +328,14 @@ const SEO: React.FunctionComponent<SEOProps> = ({
           <script async defer crossOrigin={"anonymous"} src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0&appId=245392315801658&autoLogAppEvents=1" nonce="9RXWqeSW"></script>
 
       }
-      {
+      {/* {
         isHome
           ?
           <script></script>
           :
           <script async defer src="https://platform.twitter.com/widgets.js" charSet={"utf-8"}></script>
 
-      }
+      } */}
       {
         isHome
           ?

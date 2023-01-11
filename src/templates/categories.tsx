@@ -9,14 +9,14 @@ import { TagPostsWrapper, TagPageHeading, TagName } from './templates.style';
 const Categories = ({ pageContext, data }: any) => {
   const { category } = pageContext;
   const { edges, totalCount } = data.allMdx;
-
+  let cat = _.capitalize(category.replace('/i', '').replace('/', ''))
   return (
     <Layout>
-      <SEO title={_.capitalize(category)} description={`A collection of ${totalCount} post related to ${category}`} />
+      <SEO title={cat} description={`A collection of ${totalCount} post related to ${cat}`} />
 
       <TagPostsWrapper>
         <TagPageHeading>
-          <TagName>{_.capitalize(category)}</TagName>
+          <TagName>{cat}</TagName>
           {`A collection of ${totalCount} post`}
         </TagPageHeading>
         {edges.map(({ node }: any) => (
@@ -41,7 +41,7 @@ export const pageQuery = graphql`
     allMdx(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { categories: { in: [$category] } } }
+      filter: { frontmatter: { categories: { regex: $category } } }
     ) {
       totalCount
       edges {

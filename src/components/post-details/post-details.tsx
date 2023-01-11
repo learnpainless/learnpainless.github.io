@@ -124,7 +124,7 @@ const PostDetails: React.FunctionComponent<PostDetailsProps> = ({
         <PostDescription className="post_des">
           <MDXRenderer>{description}</MDXRenderer>
         </PostDescription>
-
+        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy Me a Coffee', '#29abe0', 'H2H0FYBSF');kofiwidget2.draw();</script> 
         {tags == null ? null : (
           <PostTags>
             {tags.map((tag, index) => (
