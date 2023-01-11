@@ -142,6 +142,7 @@ exports.createPages = async ({ graphql, actions }) => {
     //console.log(tags)
     tags.forEach(value => {
       let tag = `/${value}/i`
+      tag = tag.replaceAll('+', '\\+')
       createPage({
         path: `/tags/${_.kebabCase(value)}/`,
         component: tagTemplate,
@@ -165,6 +166,7 @@ exports.createPages = async ({ graphql, actions }) => {
     // Make tag pages
     categories.forEach(value => {
       let category = `/${value}/i`
+      category = category.replaceAll('+', '\\+')
       createPage({
         path: `/categories/${_.kebabCase(value)}/`,
         component: categoryTemplate,
