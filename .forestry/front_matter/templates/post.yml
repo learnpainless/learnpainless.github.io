@@ -80,6 +80,7 @@ fields:
   default: true
   hidden: true
 pages:
+- content/posts/50-flutter-interview-question-for-1-year-experience.mdx
 - content/posts/comprehensive-guide-setting-path-provider-flutter.mdx
 - content/posts/creating-a-simple-but-powerful-flutter-redux-login-example.mdx
 - content/posts/disable-back-button-flutter-app.mdx
