@@ -1,5 +1,5 @@
 ---
-date: 2023-01-14T18:43:35+05:30
+date: 2023-01-14T18:43:35.000+05:30
 tags:
 - flutter interview question
 - interview question
@@ -43,7 +43,9 @@ Are you looking for **Flutter interview question** for a 1 year experienced deve
     * Flutter provides a set of internationalization (i18n) and localization (l10n) libraries that can be used to support different languages and cultures in the app. These libraries provide support for loading localized strings, formatting dates, times, and numbers, and handling right-to-left languages.
  9. **How does Flutter handle navigation and routing in the app?**
     * Flutter uses a navigation stack to handle navigation and routing in the app. Developers can push new routes onto the stack to navigate to new screens, and pop routes off the stack to navigate back. Flutter also provides a Navigator widget that can be used to manage the navigation stack and handle transitions between routes.
-10. **What are some popular packages and libraries that are commonly used in Flutter development?**
+10. **How would you make sure you’re using all features of Flutter?**
+    * Applicants should know that to make sure they’re making full use of all the features of Flutter, they can refer to the Flutter documentation and use different resources available online.
+11. **What are some popular packages and libraries that are commonly used in Flutter development?**
     * Some popular packages and libraries that are commonly used in Flutter development include:
     * `provider` for state management
     * `dio` for networking
@@ -52,37 +54,35 @@ Are you looking for **Flutter interview question** for a 1 year experienced deve
     * `flutter_map` for displaying maps
     * `flutter_web_browser` for opening web pages in the app
     * `flutter_slidable` for creating swipeable list items
-11. **How does Flutter handle HTTP requests and networking?**
+12. **How does Flutter handle HTTP requests and networking?**
     * Flutter provides a built-in **`http`** package for making HTTP requests and handling responses. You can use the package to make `GET`, `POST`, `PUT`, `DELETE` requests, and handle responses with `JSON` or `XML`. You can also use external libraries such as **`dio`** or **`chopper`** for networking, they provide more advanced features like caching, request cancelation, retry and more.
-12. **How does Flutter handle storage and database management?**
+13. **How does Flutter handle storage and database management?**
     * Flutter provides a built-in **`sqflite`** package for storing data locally on the device. It provides a way to store and retrieve data in a SQLite database. Additionally, there are other popular packages such as **`hive`** and **`shared_preferences`** that provide more advanced features for storing and managing data.
-13. **Can you explain the concept of streams in Flutter and how they are used?**
+14. **Can you explain the concept of streams in Flutter and how they are used?**
     * `Streams` in Flutter are used to handle asynchronous data, such as user input or network responses. A stream is a sequence of asynchronous events. It can be used to listen to data and react to it as it arrives. In Flutter, streams are implemented using the **`dart:async`** library and can be used with the **`StreamBuilder`** widget to automatically rebuild the UI when new data arrives.
-14. **How can we test our Flutter app?**
+15. **How can we test our Flutter app?**
     * Flutter provides several ways to test your app:
     * Unit testing: you can use **`test`** package to create unit tests for your app's business logic.
     * Widget testing: you can use **`flutter_test`** package to create widget tests for your app's UI.
     * Integration testing: you can use **`flutter_driver`** package to run integration tests that interact with your app as a user would.
-15. **How can we deploy our Flutter app to different app stores?**
+16. **How can we deploy our Flutter app to different app stores?**
     * Flutter provides a simple command-line tool called **`flutter build`** to build the app for different platforms. You can use it to build the app for iOS and Android. Once the app is built, you can then upload it to the App Store or Google Play Store for distribution.
-16. **How can Flutter be used for web development?**
+17. **How can Flutter be used for web development?**
     * Flutter can be used for web development by using the **`flutter_web`** module, which allows you to run Flutter apps in the browser using the same codebase as your mobile app. This means that you can use the same widgets, layout, and logic for both web and mobile apps, making it easier to develop and maintain cross-platform apps.
-17. **How can we implement push notifications in Flutter?**
+18. **How can we implement push notifications in Flutter?**
     * To implement push notifications in Flutter, you can use the **`firebase_messaging`** package. It provides an easy-to-use API that allows you to receive and handle push notifications in your app. You can also use other popular packages such as **`onesignal`** or **`flutter_local_notifications`** for push notifications.
-18. **How can we implement in-app purchases in Flutter?**
+19. **How can we implement in-app purchases in Flutter?**
     * To implement in-app purchases in Flutter, you can use the **`in_app_purchase`** package. It provides an easy-to-use API that allows you to handle in-app purchases on both iOS and Android. You can also use other popular packages such as **`billing_client`** for in-app purchases.
-19. **How does Flutter handle accessibility for people with disabilities?**
+20. **How does Flutter handle accessibility for people with disabilities?**
     * Flutter provides built-in support for accessibility features such as screen readers, large fonts, and high contrast mode. You can use the **`Semantics`** widget to provide additional information about the interface to assistive technologies, such as screen readers. Also, you can use the **`Focus`** widget to handle keyboard navigation and accessibility in forms.
-20. **How can we implement analytics in Flutter?**
+21. **How can we implement analytics in Flutter?**
     * To implement analytics in Flutter, you can use a popular package such as **`firebase_analytics`** or **`flutter_analytics`** to track user behavior and app usage. You can also use other popular analytics services like Google Analytics or Mixpanel. These packages provide easy-to-use APIs that allow you to track events and user behavior in your app.
-21. **How can we implement Splash Screen in Flutter?**
+22. **How can we implement Splash Screen in Flutter?**
     * To implement a splash screen in Flutter, you can use the **`SplashScreen`** package. It provides a simple way to show a splash screen while your app is loading. You can customize the splash screen by providing a background color, logo, and text. Alternatively, you can create your own splash screen by using the **`Stack`** widget and placing an **`Image`** widget as the background, and then using a **`FutureBuilder`** widget to wait for the app to be initialized before navigating to the next screen.
-22. **How can we implement Push to Talk feature in Flutter?**
+23. **How can we implement Push to Talk feature in Flutter?**
     * To implement a push to talk feature in Flutter, you can use the **`Flutter_Sound`** package, it allows you to record and play audio in your app. You can use it to implement a push to talk feature by recording audio when the user presses a button, and then sending it to a server or another device. Alternatively, you can use the **`audio_recorder`** package to record audio and **`socket`** package to send the audio data over a network connection.
-23. **How can we implement image picker and cropper in Flutter?**
+24. **How can we implement image picker and cropper in Flutter?**
     * To implement an image picker and cropper in Flutter, you can use the **`image_picker`** package to pick an image from the gallery or camera and the **`image_cropper`** package to crop the selected image. Both packages provide an easy-to-use API that allows you to pick and crop images in your app.
-24. **How can we implement Face Detection in Flutter?**
-    * To implement Face Detection in Flutter, you can use the **`firebase_ml_vision`** package. It provides an easy-to-use API for using Firebase's Machine Learning Kit to detect faces in an image. You can use it to detect faces in an image and then use the coordinates to draw a bounding box around the face.
 25. **How can we implement QR Code Scanner in Flutter?**
     * To implement a QR Code Scanner in Flutter, you can use the **`barcode_scan`** package. It provides an easy-to-use API for scanning QR codes and barcodes. You can use it to scan QR codes and barcodes and then retrieve the data encoded in them. Additionally, you can also use other packages like **`qr_code_scanner`** or **`qrscan`** to implement QR Code Scanner feature in your app.
 26. **How can we implement Fingerprint Authentication in Flutter?**
@@ -125,13 +125,11 @@ Are you looking for **Flutter interview question** for a 1 year experienced deve
     * To implement a Face Detection feature in Flutter, you can use the **`firebase_ml_vision`** package. It provides an easy-to-use API for using Firebase's Machine Learning Kit to detect faces in an image. You can use it to detect faces in an image and then use the coordinates to draw a bounding box around the face. Additionally, you can also use other packages like **`tflite`** or **`mlkit`** to implement a Face Detection feature in your app.
 45. **How can we implement a QR Code Generator in Flutter?**
     * To implement a QR Code Generator in Flutter, you can use the **`qr_code`** package. It provides an easy-to-use API for generating QR codes. You can use it to generate QR codes from text, URLs, or other data, customize the appearance of the QR code, and save it as an image. Additionally, you can also use other packages like **`qr_flutter`** or **`qr_code_image`** to implement a QR Code Generator feature in your app.
-46. **How can we implement Push notifications with Firebase Cloud Messaging in Flutter?**
-    * To implement push notifications with Firebase Cloud Messaging (FCM) in Flutter, you can use the **`firebase_messaging`** package. It provides an easy-to-use API for using FCM to send and receive push notifications. You can use it to register the app with FCM, subscribe to topics, and handle incoming push notifications.
-47. **How can we implement a Firebase Authentication in Flutter?**
+46. **How can we implement a Firebase Authentication in Flutter?**
     * To implement Firebase Authentication in Flutter, you can use the **`firebase_auth`** package. It provides an easy-to-use API for using Firebase Authentication in your app. You can use it to authenticate users using different methods such as email and password, phone number, and more. Additionally, you can also use other packages like **`google_sign_in`** or **`flutter_facebook_login`** to implement Firebase Authentication feature in your app.
-48. **How can we implement a Firebase Realtime Database in Flutter?**
+47. **How can we implement a Firebase Realtime Database in Flutter?**
     * To implement a Firebase Realtime Database in Flutter, you can use the **`firebase_database`** package. It provides an easy-to-use API for using Firebase Realtime Database in your app. You can use it to read and write data to the database, handle events such as value changes, and perform complex queries.
-49. **How can we implement a Firebase Cloud Storage in Flutter?**
+48. **How can we implement a Firebase Cloud Storage in Flutter?**
     * To implement Firebase Cloud Storage in Flutter, you can use the **`firebase_storage`** package. It provides an easy-to-use API for using Firebase Cloud Storage in your app. You can use it to upload and download files, handle progress, and manage files in the storage.
-50. **How can we implement a Firebase Cloud Firestore in Flutter?**
+49. **How can we implement a Firebase Cloud Firestore in Flutter?**
     * To implement Firebase Cloud Firestore in Flutter, you can use the **`cloud_firestore`** package. It provides an easy-to-use API for using Firebase Cloud Firestore in your app. You can use it to read and write data to the Firestore, handle events such as changes in the data, perform complex queries and operations, and manage collections and documents in the Firestore.
