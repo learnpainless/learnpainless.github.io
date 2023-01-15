@@ -1,9 +1,10 @@
 const path = require(`path`)
 const _ = require('lodash')
 const moment = require('moment')
-const { createFilePath } = require(`gatsby-source-filesystem`)
+// const { createFilePath } = require(`gatsby-source-filesystem`)
 const express = require(`express`)
-const { google } = require('googleapis')
+// const { google } = require('googleapis')
+// const types = require('./src/types')
 
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
@@ -219,3 +220,13 @@ exports.onCreateWebpackConfig = ({ getConfig, stage }) => {
     }
   }
 }
+
+/* exports.createSchemaCustomization = ({ actions, schema }) => {
+  const { createTypes } = actions
+
+  const allTypeDefs = [
+    types.file,
+  ]
+
+  createTypes(allTypeDefs)
+} */

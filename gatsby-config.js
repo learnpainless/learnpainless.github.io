@@ -15,6 +15,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-advanced-sitemap`,
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
@@ -35,7 +36,21 @@ module.exports = {
         name: `assets`,
       },
     },
-
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          process.env.GOOGLE_ANALYTICS
+        ],
+        pluginConfig: {
+          head: true,
+        },
+        gtagConfig: {
+          send_page_view: true, // Explicitly set to true
+        },
+      }
+    },
+    
     {
       //resolve: `gatsby-transformer-remark`,
       resolve: `gatsby-plugin-mdx`,

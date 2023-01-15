@@ -1,0 +1,8 @@
+type MdxArticleProxy implements Node & Article
+  @dontInfer
+  @childOf(types: ["Mdx"])
+  @proxyOf(type: "Mdx") {
+  title: String! @proxyField(from: "parent.frontmatter.title")
+  slug: String! @proxyField(from: "parent.frontmatter") @makeSlug
+  draft: Boolean @proxyField(from: "parent.frontmatter.draft")
+}

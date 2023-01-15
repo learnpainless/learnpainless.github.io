@@ -1,0 +1,8 @@
+
+interface Article implements Node {
+  id: ID!
+  title: String!
+  slug: String!
+  date: Date @proxy(from: "date") @dateformat
+  draft: Boolean
+}
