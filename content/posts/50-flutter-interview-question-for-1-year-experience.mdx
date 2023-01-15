@@ -53,26 +53,32 @@ Are you looking for **Flutter interview question** for a 1 year experienced deve
  9. **What is Container class in Flutter?**
     * The **`Container`** class in Flutter is a convenience widget that allows developers to easily create a box with some padding and a specified width, height, and color. It is often used as a parent widget to hold and position other widgets.
 10. **What is a SizedBox in flutter?**
-    * In Flutter, the SizedBox widget is a simple container that can specify a fixed width and/or height. It is a convenience widget that can be used to add empty space between widgets or force a widget to have a specific size.
-11. **How does the layout and rendering process work in Flutter?**
+    * In Flutter, the **`SizedBox`** widget is a simple container that can specify a fixed width and/or height. It is a convenience widget that can be used to add empty space between widgets or force a widget to have a specific size.
+11. **Explain how a SizedBox is different from a Container?**
+    * In Flutter, both SizedBox and Container widgets are used to hold and position other widgets, but they have different purposes and behaviours.
+
+      A Container widget is a general-purpose container that can be used to hold and position other widgets, set the size and color of the container, and apply padding and margins. It can also be used to apply a specific width and height. It also allows setting decorations such as background images, gradients, etc.
+
+      A SizedBox widget, on the other hand, is a simple container used to specify a fixed width and/or height. It does not take any space in the layout itself. It just influences the size of its child. It's commonly used to add empty space between widgets or force a widget to have a specific size.
+12. **How does the layout and rendering process work in Flutter?**
     * In Flutter, the layout and rendering process is handled by the framework itself, rather than relying on the native widgets and layout managers of the underlying platform. This allows for more consistent and predictable behavior across different platforms. The layout is defined using a tree of widgets, with the root widget being the parent of all other widgets in the app. The framework then uses this widget tree to calculate the layout and paint the widgets on the screen.
-12. **How does Flutter handle the issue of different screen sizes and resolutions on different devices?**
+13. **How does Flutter handle the issue of different screen sizes and resolutions on different devices?**
     * Flutter handles different screen sizes and resolutions by using a flexible layout system based on constraints and percentages, rather than fixed pixel values. This allows the widgets and layout to adjust to the available space and look good on any screen size or resolution. Additionally, Flutter provides a set of built-in widgets that can automatically adapt to different screen sizes and aspect ratios, such as the `AspectRatio` and `FractionallySizedBox` widgets.
-13. **When should you use keys in Flutter?**
+14. **When should you use keys in Flutter?**
     * Can your applicants explain that keys are best used when developers want to preserve a modified widget’s state? They may also explain that developers can use keys to reorganize widget connections and widget trees, particularly when they contain stateful widgets.
-14. **Explain what `mainAxisAlignment` is?**
+15. **Explain what `mainAxisAlignment` is?**
     * In Flutter, the **`mainAxisAlignment`** property of a **`Row`** or **`Column`** widget is used to align the child widgets along the container's main axis. The main axis of a **`Row`** is horizontal, and the main axis of a **`Column`** is vertical.
-15. **Explain what `crossAxisAlignment` is?**
+16. **Explain what `crossAxisAlignment` is?**
     * In Flutter, the **`crossAxisAlignment`** property of a **`Row`** or **`Column`** widget is used to align the child widgets along the container's cross-axis. The cross-axis of a **`Row`** is vertical, and the cross-axis of a **`Column`** is horizontal.
-16. **Explain why Futures are used in Dart?**
+17. **Explain why Futures are used in Dart?**
     * In Dart and Flutter, a **`Future`** is an asynchronous operation that can complete in the future with a value or an error. It represents a single computation or action that is not completed immediately but is expected to be completed at some point in the future.
-17. **What are some best practices for designing and developing apps using Flutter?**
+18. **What are some best practices for designing and developing apps using Flutter?**
     * Some best practices for designing and developing apps using Flutter include:
     * Using the built-in widgets and layout elements provided by the framework, rather than trying to recreate them from scratch.
     * Following the Material Design guidelines for visual consistency and usability.
     * Breaking the app down into smaller, reusable widgets for easier maintenance and testing.
     * Using the provider pattern for state management.
-18. **Explain what pubspec.yaml files are for?**
+19. **Explain what pubspec.yaml files are for?**
     * **`pubspec.yaml`** files are used in Flutter projects to manage dependencies. It is a configuration file containing the package's metadata, including the package name, version, and dependencies.
 
       The file lists the package's dependencies, including both the Dart packages and the assets that the package needs to run, such as images and fonts.
@@ -82,7 +88,7 @@ Are you looking for **Flutter interview question** for a 1 year experienced deve
       This file also allows you to specify the minimum version of the flutter sdk that your package supports and specify assets, fonts and other configurations.
 
       Additionally, developers can also use this file to specify the version of the package, the author, and other useful information when publishing a package on the Dart Package Repository.
-19. **Explain how runApp() is different from main()?**
+20. **Explain how runApp() is different from main()?**
     * In Flutter, **`runApp()`** and **`main()`** are separate but related functions.
 
       **`main()`** is the app's entry point and is where the Dart runtime starts executing the app's code. It is the standard **`main()`** function in any Dart program.
@@ -90,23 +96,14 @@ Are you looking for **Flutter interview question** for a 1 year experienced deve
       **`runApp()`** is a Flutter-specific function used to start the Flutter app and attach it to the screen. It takes a widget as an argument and uses it as the root widget of the app.
 
       **`main()`** function is responsible for defining and initializing the app, setting up the dependencies and, calling the **`runApp()`** function, passing the root widget of the app as an argument.
-20. **What is the use of `Streams`?**
+21. **What is the use of `Streams`?**
     * In Flutter, a **`Stream`** is a way to handle asynchronous data that can be produced over time, such as user input, network responses, or sensor data. A **`Stream`** is a sequence of asynchronous events, and a value or an error represents each event.
-21. **How does Flutter handle app localization and internationalization?**
+22. **How does Flutter handle app localization and internationalization?**
     * Flutter provides a set of internationalization (i18n) and localization (l10n) libraries that can be used to support different languages and cultures in the app. These libraries provide support for loading localized strings, formatting dates, times, and numbers, and handling right-to-left languages.
-22. **How does Flutter handle navigation and routing in the app?**
+23. **How does Flutter handle navigation and routing in the app?**
     * Flutter uses a navigation stack to handle navigation and routing in the app. Developers can push new routes onto the stack to navigate to new screens, and pop routes off the stack to navigate back. Flutter also provides a Navigator widget that can be used to manage the navigation stack and handle transitions between routes.
-23. **How would you make sure you’re using all features of Flutter?**
+24. **How would you make sure you’re using all features of Flutter?**
     * Applicants should know that to make sure they’re making full use of all the features of Flutter, they can refer to the Flutter documentation and use different resources available online.
-24. **What are some popular packages and libraries that are commonly used in Flutter development?**
-    * Some popular packages and libraries that are commonly used in Flutter development include:
-    * `provider` for state management
-    * `dio` for networking
-    * `flutter_localizations` for localization
-    * `flutter_svg` for displaying SVG images
-    * `flutter_map` for displaying maps
-    * `flutter_web_browser` for opening web pages in the app
-    * `flutter_slidable` for creating swipeable list items
 25. **How does Flutter handle HTTP requests and networking?**
     * Flutter provides a built-in **`http`** package for making HTTP requests and handling responses. You can use the package to make `GET`, `POST`, `PUT`, `DELETE` requests, and handle responses with `JSON` or `XML`. You can also use external libraries such as **`dio`** or **`chopper`** for networking, they provide more advanced features like caching, request cancelation, retry and more.
 26. **Explain what the setState() method does?**
