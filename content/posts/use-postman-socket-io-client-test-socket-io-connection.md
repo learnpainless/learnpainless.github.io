@@ -1,6 +1,6 @@
 ---
-title: Use Postman as socket io client to test Socket.io connection
-date: 2021-07-30 06:37:00 +05:30
+title: How to test Socket io with Postman
+date: 2021-07-30T06:37:00.000+05:30
 categories:
 - postman
 - socket-io
@@ -9,14 +9,16 @@ tags:
 - WebSockets
 - APIs
 - featured
-author: [pawneshwer]
-description: Use Postman as socket io client to test Socket.io connection before developing frontend.
+author:
+- pawneshwer
+description: Use Postman as socket io client to test Socket.io connection before developing
+  frontend.
 comments: true
 layout: post
 draft: false
 image: img/use-postman-socket-io-client-test-socket-io-connection.png
----
 
+---
 ## How to test your socket.io backend without developing frontend?
 
 Have you ever thought of using Postman to test your **socket.io** server? The latest version of Postman supports **socket.io** testing with some limitations which are listed below. In addition, I have also shown an example of how message passing **socket.io** works between server and postman (client).
