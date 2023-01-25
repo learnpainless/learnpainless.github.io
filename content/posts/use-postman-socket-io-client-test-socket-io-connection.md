@@ -11,8 +11,8 @@ tags:
 - featured
 author:
 - pawneshwer
-description: Use Postman as socket io client to test Socket.io connection before developing
-  frontend.
+description: Figuring out how to test Socket IO with Postman can be tricky, but we've
+  got you covered. Follow this guide and find out how.
 comments: true
 layout: post
 draft: false
